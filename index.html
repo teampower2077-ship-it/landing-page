@@ -10,18 +10,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #08090b;
-  --bg2:      #0d0f14;
-  --bg3:      #111520;
-  --line:     rgba(255,255,255,0.10);
-  --line2:    rgba(255,255,255,0.16);
-  --green:    #00c896;
-  --green-dim:rgba(0,200,150,0.11);
-  --red:      #e05c6a;
-  --gold:     #c8a96e;
-  --text:     #eef1f6;
-  --text2:    #9aa5b4;
-  --text3:    #5c6a7d;
+  --bg:       #06080a;
+  --bg2:      #0b0e13;
+  --bg3:      #0f1219;
+  --line:     rgba(255,255,255,0.14);
+  --line2:    rgba(255,255,255,0.22);
+  --green:    #00e8a8;
+  --green-dim:rgba(0,232,168,0.09);
+  --red:      #ff5f6f;
+  --gold:     #e0bb7a;
+  --text:     #f2f5fb;
+  --text2:    #b8c4d4;
+  --text3:    #7a8fa8;
   --mono:     'DM Mono', monospace;
   --serif:    'Cormorant Garamond', serif;
   --sans:     'DM Sans', sans-serif;
@@ -108,9 +108,10 @@ nav {
   background: var(--green);
   padding: 9px 22px;
   text-decoration: none;
-  transition: opacity .2s;
+  transition: opacity .2s, box-shadow .2s;
+  box-shadow: 0 0 20px rgba(0,232,168,0.25);
 }
-.nav-cta:hover { opacity: 0.85; }
+.nav-cta:hover { opacity: 0.85; box-shadow: 0 0 32px rgba(0,232,168,0.45); }
 
 /* ── HERO ── */
 .hero {
@@ -183,11 +184,11 @@ nav {
 
 .hero-desc {
   font-size: 15px;
-  color: var(--text);
+  color: var(--text2);
   line-height: 1.9;
   max-width: 420px;
   margin-bottom: 56px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-desc strong {
@@ -209,10 +210,11 @@ nav {
   background: var(--green);
   padding: 14px 36px;
   text-decoration: none;
-  transition: opacity .2s;
+  transition: opacity .2s, box-shadow .2s;
   display: inline-block;
+  box-shadow: 0 0 24px rgba(0,232,168,0.3);
 }
-.btn-fill:hover { opacity: 0.82; }
+.btn-fill:hover { opacity: 0.82; box-shadow: 0 0 40px rgba(0,232,168,0.5); }
 
 .btn-text {
   font-family: var(--mono);
@@ -254,8 +256,8 @@ nav {
   letter-spacing: 1px;
 }
 
-.chart-bar .pair { color: var(--text); font-size: 11px; }
-.chart-bar .price-up { color: var(--green); }
+.chart-bar .pair { color: #ffffff; font-size: 11px; font-weight: 500; }
+.chart-bar .price-up { color: var(--green); font-weight: 500; }
 
 .live-indicator {
   display: flex;
@@ -304,7 +306,7 @@ nav {
 .signal-row:hover { background: var(--green-dim); }
 
 .sig-time { color: var(--text2); letter-spacing: 1px; }
-.sig-price { color: var(--text); }
+.sig-price { color: var(--text); font-weight: 500; }
 
 .sig-type {
   font-size: 9px;
@@ -368,12 +370,13 @@ nav {
 
 .stat-num {
   font-family: var(--serif);
-  font-size: 56px;
-  font-weight: 300;
-  color: var(--text);
+  font-size: 60px;
+  font-weight: 400;
+  color: #ffffff;
   line-height: 1;
   display: block;
   margin-bottom: 12px;
+  text-shadow: 0 0 40px rgba(0,232,168,0.15);
 }
 
 .stat-num sup {
@@ -383,6 +386,7 @@ nav {
   vertical-align: top;
   margin-top: 10px;
   display: inline-block;
+  font-weight: 500;
 }
 
 .stat-label {
@@ -392,14 +396,15 @@ nav {
   letter-spacing: 1px;
   display: block;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .stat-accent {
   position: absolute;
   top: 0; left: 0;
-  width: 24px; height: 2px;
+  width: 32px; height: 2px;
   background: var(--green);
+  box-shadow: 0 0 12px var(--green);
 }
 
 /* ── SECTION LABEL ── */
@@ -446,10 +451,10 @@ nav {
 
 .phil-desc {
   font-size: 15px;
-  color: var(--text);
+  color: var(--text2);
   line-height: 1.9;
   margin-top: 32px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .phil-right {
@@ -487,9 +492,9 @@ nav {
 
 .phil-item p {
   font-size: 13px;
-  color: var(--text);
+  color: var(--text2);
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── FEATURES ── */
@@ -542,8 +547,8 @@ nav {
 
 .feat-cell h3 {
   font-size: 15px;
-  font-weight: 400;
-  color: var(--text);
+  font-weight: 500;
+  color: #ffffff;
   margin-bottom: 14px;
   line-height: 1.4;
   font-family: var(--sans);
@@ -551,9 +556,9 @@ nav {
 
 .feat-cell p {
   font-size: 13px;
-  color: var(--text);
+  color: var(--text2);
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── SIGNAL SECTION ── */
@@ -617,9 +622,9 @@ nav {
 .log-row:last-child { border-right: none; }
 .log-row:hover { background: var(--green-dim); }
 
-.log-time { color: var(--text3); }
-.log-price { color: var(--text); }
-.log-result { margin-left: auto; font-size: 10px; }
+.log-time { color: var(--text2); }
+.log-price { color: var(--text); font-weight: 500; }
+.log-result { margin-left: auto; font-size: 10px; font-weight: 500; }
 
 /* ── PRICING ── */
 .pricing-wrap {
@@ -719,7 +724,7 @@ nav {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -751,8 +756,10 @@ nav {
 .price-btn-solid {
   background: var(--green);
   color: #000;
+  box-shadow: 0 0 24px rgba(0,232,168,0.3);
+  font-weight: 500;
 }
-.price-btn-solid:hover { opacity: 0.85; }
+.price-btn-solid:hover { opacity: 0.85; box-shadow: 0 0 40px rgba(0,232,168,0.5); }
 
 /* ── DISCLAIMER ── */
 .disclaimer-wrap {
@@ -770,8 +777,8 @@ nav {
 
 .disclaimer p {
   font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text3);
+  font-size: 12px;
+  color: var(--text2);
   line-height: 1.9;
 }
 
@@ -959,7 +966,7 @@ nav {
 }
 .trial-field input::placeholder { color: var(--text3); }
 .trial-field input:focus,
-.trial-field select:focus { border-color: rgba(0,200,150,0.4); }
+.trial-field select:focus { border-color: rgba(0,232,168,0.5); box-shadow: 0 0 0 1px rgba(0,232,168,0.15); }
 .trial-field select { cursor: pointer; color: var(--text2); }
 .trial-field select option { background: #0d0f14; }
 
@@ -971,7 +978,7 @@ nav {
   font-size: 12px;
   color: var(--text2);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
 }
 .trial-agree input[type=checkbox] { display: none; }
 .trial-agree .check-box {
@@ -1007,11 +1014,13 @@ nav {
   padding: 18px 40px;
   border: none;
   cursor: pointer;
-  transition: opacity .2s;
+  transition: opacity .2s, box-shadow .2s;
   align-self: flex-start;
   margin-top: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 24px rgba(0,232,168,0.3);
 }
-.trial-submit:hover { opacity: 0.85; }
+.trial-submit:hover { opacity: 0.85; box-shadow: 0 0 40px rgba(0,232,168,0.5); }
 .trial-submit:disabled {
   background: var(--text3);
   cursor: not-allowed;
@@ -1023,7 +1032,7 @@ nav {
   display: none;
   padding: 40px;
   background: var(--bg2);
-  border: 1px solid rgba(0,200,150,0.2);
+  border: 1px solid rgba(0,232,168,0.2);
   text-align: center;
 }
 .trial-success .success-icon {
@@ -1041,7 +1050,7 @@ nav {
   font-size: 13px;
   color: var(--text2);
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 .trial-success .success-tg {
   display: inline-block;
@@ -1256,7 +1265,7 @@ footer p {
     <h2 class="sec-title">왜<br><em>터틀인가</em></h2>
     <p class="phil-desc">단기 고수익보다 장기 생존이 먼저입니다. 느리지만 멈추지 않는 전략이, 결국 이깁니다.</p>
     <p class="phil-desc">하루 100~200달러. 홈런이 아닌 베이스히트를 꾸준히 쌓는 방식입니다.</p>
-    <p class="phil-desc">프랍의 이점을 활용해 20개 계좌를 거북이처럼 운영하는 것, 그것이 TURTLE 20 PA의 이름이 가진 의미입니다.</p>
+    <p class="phil-desc">그리고 프랍의 이점을 활용해 20개 계좌를 거북이처럼 운영하는 것, 그것이 TURTLE 20 PA의 이름이 가진 의미입니다.</p>
   </div>
   <div class="phil-right">
     <div class="phil-item">
@@ -1389,12 +1398,12 @@ footer p {
   <!-- 선착순 카운터 -->
   <div class="trial-counter">
     <div class="counter-nums">
-      <span class="counter-left" id="spotsLeft">247</span>
+      <span class="counter-left" id="spotsLeft">67</span>
       <span class="counter-slash">/</span>
-      <span class="counter-total">300</span>
+      <span class="counter-total">100</span>
     </div>
     <div class="counter-bar-wrap">
-      <div class="counter-bar-fill" id="counterBar" style="width:17.7%"></div>
+      <div class="counter-bar-fill" id="counterBar" style="width:33%"></div>
     </div>
     <span class="counter-label">남은 자리</span>
   </div>
@@ -1467,29 +1476,53 @@ footer p {
   </div>
 </section>
 
-<script>
-(function() {
-  const TOTAL = 300;
+
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyB4LOIJ_2PvWphrEiv_b5_ucc8FkJNUsfM",
+    authDomain: "turtle20pa.firebaseapp.com",
+    projectId: "turtle20pa",
+    storageBucket: "turtle20pa.firebasestorage.app",
+    messagingSenderId: "196143877499",
+    appId: "1:196143877499:web:1e73e1b11648ed1ff601de"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const TOTAL = 100;
+  const counterRef = doc(db, 'trial', 'counter');
   const STORAGE_KEY = 'turtle_trial_v1';
-  const COUNT_KEY   = 'turtle_trial_count_v1';
 
-  // 남은 자리 (실제로는 서버 연동 필요 — 여기선 localStorage 시뮬레이션)
-  let count = parseInt(localStorage.getItem(COUNT_KEY) || '53', 10);
-  const left = TOTAL - count;
-
-  function updateCounter(n) {
-    document.getElementById('spotsLeft').textContent = n;
-    const pct = ((TOTAL - n) / TOTAL * 100).toFixed(1);
-    document.getElementById('counterBar').style.width = pct + '%';
+  // 카운터 초기화 (처음 한 번만)
+  async function initCounter() {
+    const snap = await getDoc(counterRef);
+    if (!snap.exists()) {
+      await setDoc(counterRef, { count: 33 });
+    }
   }
+  initCounter();
 
-  updateCounter(left);
+  // 실시간 카운터 업데이트
+  onSnapshot(counterRef, (snap) => {
+    if (snap.exists()) {
+      const count = snap.data().count;
+      const left = TOTAL - count;
+      const safeLeft = left < 0 ? 0 : left;
+      document.getElementById('spotsLeft').textContent = safeLeft;
+      const pct = (count / TOTAL * 100).toFixed(1);
+      document.getElementById('counterBar').style.width = pct + '%';
 
-  // 마감 체크
-  if (left <= 0) {
-    document.getElementById('trialFormWrap').style.display = 'none';
-    document.getElementById('trialClosed').style.display = 'block';
-  }
+      if (safeLeft <= 0) {
+        document.getElementById('trialFormWrap').style.display = 'none';
+        document.getElementById('trialClosed').style.display = 'block';
+      }
+    }
+  });
 
   // 이미 신청한 사람
   if (localStorage.getItem(STORAGE_KEY)) {
@@ -1497,7 +1530,7 @@ footer p {
     document.getElementById('trialSuccess').style.display = 'block';
   }
 
-  window.submitTrial = function() {
+  window.submitTrial = async function() {
     const name   = document.getElementById('tf-name').value.trim();
     const tg     = document.getElementById('tf-tg').value.trim();
     const tv     = document.getElementById('tf-tv').value.trim();
@@ -1510,7 +1543,6 @@ footer p {
     if (!exp)    { alert('트레이딩 경험을 선택해주세요.'); return; }
     if (!agreed) { alert('체험 조건에 동의해주세요.'); return; }
 
-    // 중복 방지
     if (localStorage.getItem(STORAGE_KEY)) {
       alert('이미 신청이 완료되었습니다.'); return;
     }
@@ -1519,22 +1551,28 @@ footer p {
     btn.disabled = true;
     btn.textContent = '처리 중…';
 
-    // 실제 서버 전송 대신 1초 딜레이 후 완료 처리
-    setTimeout(function() {
-      count++;
-      localStorage.setItem(COUNT_KEY, count);
+    try {
+      // Firebase에 신청자 저장
+      const applyRef = doc(db, 'trial', 'applicants_' + Date.now());
+      await setDoc(applyRef, { name, email: tg, tradingview: tv, exp, ts: new Date() });
+
+      // 카운터 증가
+      await updateDoc(counterRef, { count: increment(1) });
+
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ name, tg, tv, exp, ts: Date.now() }));
 
       document.getElementById('trialFormWrap').style.display = 'none';
       document.getElementById('trialSuccess').style.display = 'block';
       document.getElementById('trialSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-      const newLeft = TOTAL - count;
-      updateCounter(newLeft < 0 ? 0 : newLeft);
-    }, 1000);
+    } catch(e) {
+      btn.disabled = false;
+      btn.textContent = '무료 체험 신청하기 →';
+      alert('오류가 발생했습니다. 다시 시도해주세요.');
+    }
   };
-})();
 </script>
+
 
 <!-- PRICING -->
 
@@ -1556,7 +1594,7 @@ footer p {
         <li>팀뷰어 원격 설치지원</li>
 
       </ul>
-      <a href="#" class="price-btn price-btn-outline">연회원 시작하기</a>
+      <a href="https://payhip.com/order?link=UVr8E&pricing_plan=PjWlKmy3Gv" target="_blank" class="price-btn price-btn-outline">월회원 시작하기</a>
     </div>
     <div class="price-card featured">
       <div class="price-tier">YEARLY</div>
@@ -1573,9 +1611,26 @@ footer p {
 
 
       </ul>
-      <a href="#" class="price-btn price-btn-solid">1년 회원 시작하기 →</a>
+      <a href="https://payhip.com/order?link=UVr8E&pricing_plan=ANzp0krLzX" target="_blank" class="price-btn price-btn-solid">1년 회원 시작하기 →</a>
     </div>
   </div>
+
+  <div style="
+    margin-top: 32px;
+    padding: 24px 32px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-left: 2px solid var(--green);
+    background: rgba(0,232,168,0.04);
+    font-family: var(--mono);
+  ">
+    <p style="font-size:12px; color:var(--text2); line-height:2; margin:0;">
+      <strong style="color:var(--green); letter-spacing:2px;">결제 완료 후</strong><br>
+      트레이딩뷰 아이디를 아래 이메일 또는 웹사이트 상담 기능을 통해 알려주세요.<br>
+      24시간 안에 매뉴얼과 승인 메일을 보내드립니다.<br><br>
+      <strong style="color:var(--text);">✉ maketk@kakao.com</strong>
+    </p>
+  </div>
+
 </section>
 
 <!-- DISCLAIMER -->
@@ -1607,5 +1662,18 @@ footer p {
   <p>© 2025 TURTLE 20 PA · ALL RIGHTS RESERVED</p>
 </footer>
 
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a161ddd8906ad1c378ecce5/1jpj69akg';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
