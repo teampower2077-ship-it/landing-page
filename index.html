@@ -1124,8 +1124,8 @@ footer p {
 }
 
 .briefing-demo-frame {
-  border: 1px solid var(--line);
-  background: var(--bg2);
+  border: 1px solid rgba(100,140,200,0.25);
+  background: #0a1628;
   overflow: hidden;
   position: relative;
 }
@@ -1135,8 +1135,8 @@ footer p {
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: rgba(255,255,255,0.03);
-  border-bottom: 1px solid var(--line);
+  background: rgba(20,40,80,0.6);
+  border-bottom: 1px solid rgba(100,140,200,0.2);
   font-family: var(--mono);
   font-size: 10px;
   color: var(--text3);
@@ -1159,6 +1159,7 @@ footer p {
   position: relative;
   cursor: pointer;
   transition: max-height 0.5s ease;
+  background: #0a1628;
 }
 
 .briefing-demo-inner.expanded {
@@ -1169,7 +1170,7 @@ footer p {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 180px;
-  background: linear-gradient(to bottom, transparent, var(--bg2));
+  background: linear-gradient(to bottom, transparent, #0a1628);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1204,7 +1205,7 @@ footer p {
   justify-content: space-between;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(80,120,200,0.2);
 }
 
 .bdemo-badge {
@@ -1231,8 +1232,8 @@ footer p {
 .bdemo-full { grid-column: 1 / -1; }
 
 .bdemo-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(15,35,70,0.7);
+  border: 1px solid rgba(80,120,200,0.2);
   padding: 16px;
   position: relative;
   overflow: hidden;
@@ -1288,8 +1289,8 @@ footer p {
 
 .bdemo-stats { display: flex; gap: 10px; margin-bottom: 12px; }
 .bdemo-stat-box {
-  flex: 1; background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08); padding: 10px 12px;
+  flex: 1; background: rgba(10,25,60,0.8);
+  border: 1px solid rgba(80,120,200,0.2); padding: 10px 12px;
 }
 .bdemo-stat-label { font-family: var(--mono); font-size: 8px; letter-spacing: 1px; color: var(--text3); margin-bottom: 4px; }
 .bdemo-stat-val { font-family: var(--mono); font-size: 16px; font-weight: 700; }
@@ -1299,8 +1300,8 @@ footer p {
 .v-white { color: #fff; }
 
 .bdemo-trade-box {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10,25,60,0.8);
+  border: 1px solid rgba(80,120,200,0.2);
   padding: 12px 14px; margin-bottom: 10px;
 }
 .bdemo-trade-dir { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -1338,7 +1339,7 @@ footer p {
 
 .bdemo-footer {
   margin-top: 16px; padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(80,120,200,0.15);
   display: flex; justify-content: space-between;
   font-family: var(--mono); font-size: 9px;
   color: var(--text3); letter-spacing: 1px;
@@ -2107,11 +2108,6 @@ function expandBriefing() {
   </div>
   <p>© 2025 TURTLE 20 PA · ALL RIGHTS RESERVED</p>
 </footer>
-
-
-
-</body>
-</html>
 
 
 
