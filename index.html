@@ -1368,71 +1368,6 @@ footer p {
   flex-shrink: 0;
 }
 
-
-/* ── BRIEFING BLUR OVERLAY ── */
-.briefing-blur-wrap {
-  position: relative;
-}
-
-.briefing-blur-wrap .briefing-demo-inner {
-  filter: blur(4px);
-  user-select: none;
-  pointer-events: none;
-  max-height: 600px;
-  overflow: hidden;
-}
-
-.briefing-blur-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background: rgba(10,9,7,0.45);
-}
-
-.blur-lock-icon {
-  font-size: 28px;
-  opacity: 0.85;
-}
-
-.blur-lock-title {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 4px;
-  color: var(--gold);
-  text-align: center;
-}
-
-.blur-lock-sub {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--text3);
-  text-align: center;
-  line-height: 1.8;
-}
-
-.blur-lock-btn {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #000;
-  background: var(--green);
-  border: none;
-  padding: 12px 28px;
-  cursor: pointer;
-  margin-top: 4px;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: 0 0 20px rgba(0,232,168,0.25);
-  transition: opacity .2s;
-}
-.blur-lock-btn:hover { opacity: 0.85; }
-
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 18px 24px; }
@@ -1599,7 +1534,7 @@ footer p {
     <div class="sec-label">PHILOSOPHY</div>
     <h2 class="sec-title">왜<br><em>터틀인가</em></h2>
     <p class="phil-desc">단기 고수익보다 장기 생존이 먼저입니다. 느리지만 멈추지 않는 전략이, 결국 이깁니다.</p>
-    <p class="phil-desc">하루 100~200달러. </p>
+    <p class="phil-desc">하루 100~200달러. 홈런이 아닌 베이스히트를 꾸준히 쌓는 방식입니다.</p>
     <p class="phil-desc">그리고 프랍의 이점을 활용해 20개 계좌를 거북이처럼 운영하는 것, 그것이 TURTLE 20 PA의 이름이 가진 의미입니다.</p>
   </div>
   <div class="phil-right">
@@ -1920,7 +1855,7 @@ footer p {
     </p>
   </div>
 
-  <div class="briefing-demo-frame briefing-blur-wrap">
+  <div class="briefing-demo-frame">
     <div class="briefing-demo-topbar">
       <span>NQ DAILY BRIEFING · SAMPLE</span>
       <span class="demo-badge">DEMO</span>
@@ -2099,14 +2034,8 @@ footer p {
       </div>
 
     </div><!-- /briefing-demo-inner -->
-    <div class="briefing-blur-overlay">
-      <div class="blur-lock-icon">🔒</div>
-      <div class="blur-lock-title">MEMBERS ONLY</div>
-      <div class="blur-lock-sub">모닝 브리핑은 구독 회원에게만 제공됩니다<br>매일 오전 8시 · NQ 핵심 지표 · 진입 전략</div>
-      <a href="#pricing" class="blur-lock-btn">구독 시작하기 →</a>
-    </div>
     <div class="briefing-fade" id="briefingFade">
-      <!-- 블러 상태에서 숨김 -->
+      <button class="briefing-expand-btn" onclick="expandBriefing()">전체 보기 ↓</button>
     </div>
   </div><!-- /briefing-demo-frame -->
 </section>
@@ -2211,3 +2140,4 @@ function expandBriefing() {
 
 </body>
 </html>
+
