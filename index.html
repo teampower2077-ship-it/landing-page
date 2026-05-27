@@ -1719,9 +1719,39 @@ footer p {
 .kakao-float-btn {
   animation: kakao-pulse 2.5s ease-in-out infinite;
 }
+
+.kakao-tooltip {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 12px 16px;
+  border-radius: 12px 12px 2px 12px;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  pointer-events: none;
+}
+
+.kakao-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 18px;
+  border-width: 7px 7px 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
 </style>
 
 <a class="kakao-float" href="https://open.kakao.com/o/s0xQ6Mwi" target="_blank" title="카카오 오픈채팅 상담">
+  <div class="kakao-tooltip">
+    카카오톡 상담은 늦어질 수 있습니다.<br>
+    가급적 <strong>이메일로 문의</strong> 주시면 감사하겠습니다.
+  </div>
   <div class="kakao-float-btn">
     <svg viewBox="0 0 24 24" fill="#3C1E1E" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.572 1.53 4.833 3.857 6.18L4.5 21l4.863-2.5A11.3 11.3 0 0 0 12 18c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
