@@ -1124,8 +1124,8 @@ footer p {
 }
 
 .briefing-demo-frame {
-  border: 1px solid rgba(80,120,180,0.3);
-  background: #050d1a;
+  border: 1px solid rgba(180,155,100,0.2);
+  background: #0c0c0e;
   overflow: hidden;
   position: relative;
 }
@@ -1135,8 +1135,8 @@ footer p {
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: rgba(8,20,50,0.8);
-  border-bottom: 1px solid rgba(100,140,200,0.2);
+  background: rgba(20,18,14,0.9);
+  border-bottom: 1px solid rgba(180,155,100,0.15);
   font-family: var(--mono);
   font-size: 10px;
   color: var(--text3);
@@ -1159,7 +1159,7 @@ footer p {
   position: relative;
   cursor: pointer;
   transition: max-height 0.5s ease;
-  background: #050d1a;
+  background: #0c0c0e;
 }
 
 .briefing-demo-inner.expanded {
@@ -1170,7 +1170,7 @@ footer p {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 180px;
-  background: linear-gradient(to bottom, transparent, #050d1a);
+  background: linear-gradient(to bottom, transparent, #0c0c0e);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1205,7 +1205,7 @@ footer p {
   justify-content: space-between;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(80,120,200,0.2);
+  border-bottom: 1px solid rgba(180,155,100,0.12);
 }
 
 .bdemo-badge {
@@ -1232,8 +1232,8 @@ footer p {
 .bdemo-full { grid-column: 1 / -1; }
 
 .bdemo-card {
-  background: rgba(5,18,45,0.85);
-  border: 1px solid rgba(80,120,200,0.2);
+  background: rgba(16,15,12,0.9);
+  border: 1px solid rgba(180,155,100,0.12);
   padding: 16px;
   position: relative;
   overflow: hidden;
@@ -1289,8 +1289,8 @@ footer p {
 
 .bdemo-stats { display: flex; gap: 10px; margin-bottom: 12px; }
 .bdemo-stat-box {
-  flex: 1; background: rgba(4,14,36,0.9);
-  border: 1px solid rgba(80,120,200,0.2); padding: 10px 12px;
+  flex: 1; background: rgba(12,11,9,0.95);
+  border: 1px solid rgba(180,155,100,0.1); padding: 10px 12px;
 }
 .bdemo-stat-label { font-family: var(--mono); font-size: 8px; letter-spacing: 1px; color: var(--text3); margin-bottom: 4px; }
 .bdemo-stat-val { font-family: var(--mono); font-size: 16px; font-weight: 700; }
@@ -1300,8 +1300,8 @@ footer p {
 .v-white { color: #fff; }
 
 .bdemo-trade-box {
-  background: rgba(4,14,36,0.9);
-  border: 1px solid rgba(80,120,200,0.2);
+  background: rgba(12,11,9,0.95);
+  border: 1px solid rgba(180,155,100,0.1);
   padding: 12px 14px; margin-bottom: 10px;
 }
 .bdemo-trade-dir { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -1339,11 +1339,99 @@ footer p {
 
 .bdemo-footer {
   margin-top: 16px; padding-top: 12px;
-  border-top: 1px solid rgba(80,120,200,0.15);
+  border-top: 1px solid rgba(180,155,100,0.1);
   display: flex; justify-content: space-between;
   font-family: var(--mono); font-size: 9px;
   color: var(--text3); letter-spacing: 1px;
 }
+
+
+.site-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #e0bb7a;
+  border: 1px solid rgba(224,187,122,0.35);
+  background: rgba(224,187,122,0.07);
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+.site-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e0bb7a;
+  animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+
+/* ── BRIEFING BLUR OVERLAY ── */
+.briefing-blur-wrap {
+  position: relative;
+}
+
+.briefing-blur-wrap .briefing-demo-inner {
+  filter: blur(4px);
+  user-select: none;
+  pointer-events: none;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.briefing-blur-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(10,9,7,0.45);
+}
+
+.blur-lock-icon {
+  font-size: 28px;
+  opacity: 0.85;
+}
+
+.blur-lock-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-align: center;
+}
+
+.blur-lock-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text3);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.blur-lock-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #000;
+  background: var(--green);
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  margin-top: 4px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0,232,168,0.25);
+  transition: opacity .2s;
+}
+.blur-lock-btn:hover { opacity: 0.85; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -1382,6 +1470,10 @@ footer p {
   <div class="logo-mark">
     <div class="logo-main">TURTLE 20 PA</div>
     <div class="logo-sub">NASDAQ INDICATOR SYSTEM</div>
+  </div>
+  <div class="site-status-badge">
+    <span class="site-status-dot"></span>
+    사이트 준비중
   </div>
   <div class="nav-right">
     <a href="#features" class="nav-link">FEATURES</a>
@@ -1507,7 +1599,7 @@ footer p {
     <div class="sec-label">PHILOSOPHY</div>
     <h2 class="sec-title">왜<br><em>터틀인가</em></h2>
     <p class="phil-desc">단기 고수익보다 장기 생존이 먼저입니다. 느리지만 멈추지 않는 전략이, 결국 이깁니다.</p>
-    <p class="phil-desc">하루 100~200달러. 홈런이 아닌 베이스히트를 꾸준히 쌓는 방식입니다.</p>
+    <p class="phil-desc">하루 100~200달러. </p>
     <p class="phil-desc">그리고 프랍의 이점을 활용해 20개 계좌를 거북이처럼 운영하는 것, 그것이 TURTLE 20 PA의 이름이 가진 의미입니다.</p>
   </div>
   <div class="phil-right">
@@ -1828,7 +1920,7 @@ footer p {
     </p>
   </div>
 
-  <div class="briefing-demo-frame">
+  <div class="briefing-demo-frame briefing-blur-wrap">
     <div class="briefing-demo-topbar">
       <span>NQ DAILY BRIEFING · SAMPLE</span>
       <span class="demo-badge">DEMO</span>
@@ -2007,8 +2099,14 @@ footer p {
       </div>
 
     </div><!-- /briefing-demo-inner -->
+    <div class="briefing-blur-overlay">
+      <div class="blur-lock-icon">🔒</div>
+      <div class="blur-lock-title">MEMBERS ONLY</div>
+      <div class="blur-lock-sub">모닝 브리핑은 구독 회원에게만 제공됩니다<br>매일 오전 8시 · NQ 핵심 지표 · 진입 전략</div>
+      <a href="#pricing" class="blur-lock-btn">구독 시작하기 →</a>
+    </div>
     <div class="briefing-fade" id="briefingFade">
-      <button class="briefing-expand-btn" onclick="expandBriefing()">전체 보기 ↓</button>
+      <!-- 블러 상태에서 숨김 -->
     </div>
   </div><!-- /briefing-demo-frame -->
 </section>
@@ -2034,25 +2132,26 @@ function expandBriefing() {
       <div class="price-note">매월 갱신 · 언제든 취소 가능</div>
       <ul class="price-features">
         <li>TURTLE 20 PA 인디케이터 접근권</li>
+        <li>나스닥 5분봉 시그널 텔레그램 공유</li>
         <li>기본 세팅 + 활용 가이드 & Q/A 제공</li>
         <li>모닝 브리핑 매일 아침 발송 (오전 8시)</li>
         <li>팀뷰어 원격 설치지원</li>
-
 
       </ul>
       <a href="https://payhip.com/order?link=UVr8E&pricing_plan=PjWlKmy3Gv" target="_blank" class="price-btn price-btn-outline">월회원 시작하기</a>
     </div>
     <div class="price-card featured">
       <div class="price-tier">YEARLY</div>
-      <div class="price-num"><sup>$</sup>1500<span class="unit">/1년 고급형 트레이더</span></div>
+      <div class="price-num"><sup>$</sup>1500<span class="unit">/1년</span></div>
       <div class="price-note">37.5% 할인, 4.5개월 무료</div>
       <ul class="price-features">
 
         <li>TURTLE 20 PA 인디케이터 접근권</li>
-        <li>터틀 스윙 전략 인디케이터 접근권</li>
+        <li>나스닥 5분봉 시그널 텔레그램 공유 + 터틀 스윙 전략 인디케이터 지급</li>
         <li>기본 세팅 + 활용 가이드 & Q/A 파일 + 롱숏 비율 확인프로그램 제공 </li>
         <li>모닝 브리핑 매일 아침 발송 (오전 8시)</li>
         <li>팀뷰어 원격 설치지원</li>
+        <li>평생 업데이트 지원</li>
 
 
       </ul>
