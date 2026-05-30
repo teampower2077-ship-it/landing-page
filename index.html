@@ -786,14 +786,6 @@ nav {
   outline: none;
   transition: border-color .2s;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.trial-field select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300ff9d' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 38px;
 }
 .trial-field input::placeholder { color: var(--text3); font-size: 11px; }
 .trial-field input:focus,
@@ -814,8 +806,8 @@ nav {
   position: relative;
   transition: all .2s;
 }
-.trial-agree input[type=checkbox]:checked ~ .check-box { background: var(--green); border-color: var(--green); box-shadow: 0 0 8px var(--green-glow); }
-.trial-agree input[type=checkbox]:checked ~ .check-box::after {
+.trial-agree input:checked ~ .check-box { background: var(--green); border-color: var(--green); box-shadow: 0 0 8px var(--green-glow); }
+.trial-agree input:checked ~ .check-box::after {
   content: '✓'; position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
   font-size: 9px; color: #000; font-weight: 700;
@@ -1092,7 +1084,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
             <span style="width:5px;height:5px;background:#ff3d5a;border-radius:50%;display:inline-block;animation:blink 1.2s infinite;"></span>REC
           </div>
           <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(2,4,8,0.78);border-top:1px solid rgba(0,255,157,0.12);padding:5px 10px;display:flex;justify-content:space-between;align-items:center;">
-            <span id="terminal-entry-label" style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:rgba(0,255,157,0.55);letter-spacing:2px;">MNQ 진입 · TP +50pt · SL -100pt</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:rgba(0,255,157,0.55);letter-spacing:2px;">MNQ 진입 · TP +50pt · SL -100pt</span>
             <span style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:rgba(255,179,0,0.7);letter-spacing:1px;">TURTLE 20 PA ©</span>
           </div>
         </div>
@@ -1101,25 +1093,25 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           <div class="sig-row">
             <span class="sig-time">09:35</span>
             <span class="sig-badge sb-l">LONG</span>
-            <span class="sig-desc" id="sig1">TP +50pt 도달</span>
+            <span class="sig-desc">TP +50pt 도달</span>
             <span class="sig-result w">+$100 ✓</span>
           </div>
           <div class="sig-row">
             <span class="sig-time">10:20</span>
             <span class="sig-badge sb-l">LONG</span>
-            <span class="sig-desc" id="sig2">TP +50pt 도달</span>
+            <span class="sig-desc">TP +50pt 도달</span>
             <span class="sig-result w">+$100 ✓</span>
           </div>
           <div class="sig-row">
             <span class="sig-time">11:05</span>
             <span class="sig-badge sb-l">LONG</span>
-            <span class="sig-desc" id="sig3">SL -100pt 도달</span>
+            <span class="sig-desc">SL -100pt 도달</span>
             <span class="sig-result l">−$200 ✗</span>
           </div>
           <div class="sig-row">
             <span class="sig-time">13:40</span>
             <span class="sig-badge sb-l">LONG</span>
-            <span class="sig-desc" id="sig4">TP +50pt 도달</span>
+            <span class="sig-desc">TP +50pt 도달</span>
             <span class="sig-result w">+$100 ✓</span>
           </div>
         </div>
@@ -1246,10 +1238,10 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 </section>
 
 <!-- FEATURES GRID -->
-<div id="features-grid-outer" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0 48px; background: rgba(0,255,157,0.01);">
+<div style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0 48px; background: rgba(0,255,157,0.01);">
   <div style="max-width: 1280px; margin: 0 auto; padding: 60px 0;">
-    <div class="section-label" id="feat-section-label">SYSTEM FEATURES</div>
-    <div class="section-title" id="feat-section-title">인디케이터 <em>핵심 기능</em></div>
+    <div class="section-label">SYSTEM FEATURES</div>
+    <div class="section-title">인디케이터 <em>핵심 기능</em></div>
     <div class="features-grid" style="margin-top:40px;">
       <div class="feat-cell">
         <span class="feat-n">01 · SIGNAL</span>
@@ -1417,7 +1409,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         <label class="trial-agree">
           <input type="checkbox" id="tf-agree">
           <span class="check-box"></span>
-          <span id="agree-text">
+          <span>
             <strong>체험 조건에 동의합니다.</strong><br>
             7일 무료 체험은 1인 1회만 가능하며, 체험 종료 후 솔직한 리뷰 작성에 협조합니다.
             본 인디케이터는 투자 수익을 보장하지 않으며 모든 투자 결정은 본인 책임입니다.
@@ -1459,8 +1451,8 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           <li>TURTLE 20 PA 인디케이터 접근권</li>
           <li>나스닥 5분봉 시그널 텔레그램 공유</li>
           <li>기본 세팅 + 활용 가이드 제공</li>
+          <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>팀뷰어 원격 설치 지원</li>
-          <li class="ko-only">모닝 브리핑 매일 아침 (오전 8시)</li>
         </ul>
         <a href="https://payhip.com/order?link=UVr8E&pricing_plan=PjWlKmy3Gv" target="_blank" class="price-btn price-btn-outline">월회원 시작하기 →</a>
       </div>
@@ -1472,9 +1464,9 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           <li>TURTLE 20 PA 인디케이터 접근권</li>
           <li>나스닥 5분봉 시그널 + 터틀 스윙 전략 인디케이터</li>
           <li>기본 세팅 + 활용 가이드 + 롱숏 비율 확인 프로그램</li>
+          <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>팀뷰어 원격 설치 지원</li>
           <li>평생 업데이트 지원</li>
-          <li class="ko-only">모닝 브리핑 매일 아침 (오전 8시)</li>
         </ul>
         <a href="https://payhip.com/order?link=UVr8E&pricing_plan=ANzp0krLzX" target="_blank" class="price-btn price-btn-solid">1년 회원 시작하기 →</a>
       </div>
@@ -1631,492 +1623,4 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 </script>
 
 </body>
-</html><!-- LANGUAGE TOGGLE & TRANSLATIONS -->
-<script>
-window._lang = 'ko';
-
-const translations = {
-  ko: {
-    // Notice Banner
-    noticeBanner: '⚠ 사이트 준비 중 &nbsp;·&nbsp; 현재 결제하지 마세요 — 서비스 오픈 전입니다.',
-    // Nav
-    navFeatures: 'FEATURES',
-    navTrial: 'FREE TRIAL',
-    navPricing: 'PRICING',
-    navCta: '무료체험',
-    // Hero
-    heroLabel: 'NASDAQ 5MIN · MICRO CONTRACT OPTIMIZED',
-    heroSub: 'SURVIVE LONGER. WIN SMARTER.',
-    heroDesc: '프랍트레이더가 만든 7년간의 나스닥 백테스트 기반,<br><strong>연평균 약 70% 승률</strong>을 기록한 시스템 인디케이터.<br>자동매매가 아닌, <strong>당신의 판단을 강화</strong>하는 도구입니다.',
-    heroStatLbl1: 'WIN RATE', heroStatLbl2: 'BACKTEST', heroStatLbl3: 'TIMEFRAME', heroStatLbl4: 'MARKET',
-    heroBtnPrimary: '▶ 무료 체험 신청하기',
-    heroBtnGhost: '더 알아보기 ↓',
-    // Terminal bottom label
-    terminalEntry: 'MNQ 진입 · TP +50pt · SL -100pt',
-    // Signal log
-    sig1: 'TP +50pt 도달', sig2: 'TP +50pt 도달', sig3: 'SL -100pt 도달', sig4: 'TP +50pt 도달',
-    // Stats
-    stat1Sub: '7년 나스닥 백테스트 기준',
-    stat2Sub: '2018년 ~ 2025년 실데이터',
-    stat3Sub: '나스닥 마이크로 최적화',
-    stat4Sub: 'SL 100pt · TP 50pt 기준',
-    // Philosophy
-    philSection: 'PHILOSOPHY',
-    philTitle: '거북이처럼 <em>느리게</em>, 확실하게',
-    philDesc: '빠른 수익보다 오래 살아남는 것이 진짜 트레이딩이다.',
-    phil1Title: 'SYSTEM FIRST', phil1Text: '감정이 아닌 시스템으로 진입합니다. 7년간의 백테스트가 검증한 조건에서만 시그널을 발생시킵니다.',
-    phil2Title: 'RISK CONTROL', phil2Text: '크게 잃지 않고, 여러 번 작게 쌓는 구조입니다. 승률 기반으로 설계된 반복 트레이딩 시스템입니다.',
-    phil3Title: 'SURVIVE LONGER', phil3Text: '천천히, 오래, 살아남아라. 거북이는 결국 이긴다. 단기 수익률이 아닌 장기 생존을 목표로 합니다.',
-    phil4Title: 'JUDGMENT AID', phil4Text: '자동매매가 아닙니다. 당신의 판단을 강화하는 도구입니다. 시그널은 참고용이며 최종 결정은 항상 트레이더 본인에게 있습니다.',
-    // Features
-    featSection: 'SYSTEM FEATURES',
-    featTitle: '인디케이터 <em>핵심 기능</em>',
-    feat1Title: 'PA 기반 실시간 시그널', feat1Text: '가격 액션(PA)을 기반으로 5분봉 나스닥에서 롱/숏 진입 시그널을 실시간으로 제공합니다. 노이즈를 최소화한 고신뢰도 시그널.',
-    feat2Title: '자동 SL/TP 라인 표시', feat2Text: '시그널 발생 시 SL(-100pt)과 TP(+50pt) 라인이 차트에 자동으로 표시됩니다. 진입 후 어디서 나올지 명확하게 알 수 있습니다.',
-    feat3Title: '텔레그램 실시간 알림', feat3Text: '시그널 발생 즉시 텔레그램으로 알림이 발송됩니다. 차트를 항상 보고 있지 않아도 됩니다.',
-    feat4Title: '7년 백테스트 검증', feat4Text: '2018년부터 2025년까지 7년간의 실데이터를 기반으로 검증된 전략입니다. 연평균 약 70% 승률, 리스크 대비 수익률 최적화.',
-    feat5Title: '팀뷰어 원격 설치 지원', feat5Text: 'TradingView 설정이 어려우신 분들을 위해 팀뷰어를 통한 원격 설치를 지원합니다. 초보자도 쉽게 시작할 수 있습니다.',
-    feat6Title: '지속 업데이트 · 개선', feat6Text: '시장 변화에 맞춰 지속적으로 인디케이터를 업데이트합니다. 연간 플랜 회원은 평생 업데이트를 무료로 받으실 수 있습니다.',
-    // Signal Section
-    sigSection: 'SIGNAL LOG',
-    sigTitle: '실제 <em>시그널</em> 기록',
-    // Trial
-    trialBadge: 'LIMITED · REVIEW BETA',
-    trialTitle: '1주일 <em>무료</em> 체험',
-    trialSub: '리뷰 베타 프로그램입니다. 선착순 <strong style="color:var(--text)">100명</strong>에게만 1회 한정으로 제공됩니다.<br>체험 후 솔직한 리뷰 한 줄이 전부입니다. 조건 없이 7일간 실제 시그널을 확인하세요.',
-    counterLabel: '남은 자리',
-    labelName: '이름 · NAME', labelEmail: '이메일 · EMAIL', labelTv: '트레이딩뷰 아이디 · TRADINGVIEW', labelExp: '트레이딩 경험 · EXPERIENCE',
-    placeholderName: '홍길동', selectDefault: '선택하세요',
-    expBeginner: '초보 (1년 미만)', expMid: '중급 (1~3년)', expAdv: '고급 (3년 이상)',
-    agreeTitle: '체험 조건에 동의합니다.',
-    agreeText: '7일 무료 체험은 1인 1회만 가능하며, 체험 종료 후 솔직한 리뷰 작성에 협조합니다. 본 인디케이터는 투자 수익을 보장하지 않으며 모든 투자 결정은 본인 책임입니다.',
-    submitBtn: '▶ 무료 체험 신청하기',
-    successTitle: '신청 완료됐습니다',
-    successText: '48시간 이내에 입력하신 이메일로 인디케이터 접근 코드를 보내드립니다.<br>7일간 실제 시그널을 직접 확인해보세요.',
-    successTg: '// 이메일 확인 대기 중…',
-    closedTitle: '[ 선착순 마감 ]',
-    closedText: '100명 선착순 무료 체험이 종료되었습니다.<br>유료 플랜으로 바로 시작하시거나, 아래에서 플랜을 확인해보세요.',
-    closedLink: '유료 플랜 보기 →',
-    // Pricing
-    pricingSection: 'PRICING',
-    pricingTitle: '플랜 <em>선택</em>',
-    monthlyNote: '매월 갱신 · 언제든 취소 가능',
-    monthlyUnit: '/월',
-    monthlyF1: 'TURTLE 20 PA 인디케이터 접근권',
-    monthlyF2: '나스닥 5분봉 시그널 텔레그램 공유',
-    monthlyF3: '기본 세팅 + 활용 가이드 제공',
-    monthlyF4: '팀뷰어 원격 설치 지원',
-    monthlyBtn: '월회원 시작하기 →',
-    yearlyNote: '37.5% 할인 · 4.5개월 무료',
-    yearlyUnit: '/1년',
-    yearlyF1: 'TURTLE 20 PA 인디케이터 접근권',
-    yearlyF2: '나스닥 5분봉 시그널 + 터틀 스윙 전략 인디케이터',
-    yearlyF3: '기본 세팅 + 활용 가이드 + 롱숏 비율 확인 프로그램',
-    yearlyF4: '팀뷰어 원격 설치 지원',
-    yearlyF5: '평생 업데이트 지원',
-    yearlyBtn: '1년 회원 시작하기 →',
-    payInfo: '<strong>// 결제 완료 후</strong><br>아래 링크에서 트레이딩뷰 아이디를 입력해주시면 24시간 내에 매뉴얼과 승인 메일을 보내드립니다.<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSfI1fmYmmLsEiiCESQpRFd-Yx1nDumSjlbhSTFbAaw7mOaPuA/viewform?usp=publish-editor" target="_blank">👉 정보 입력하기 →</a>&nbsp;&nbsp;|&nbsp;&nbsp;메일 미수신 시: <a href="mailto:maketk@kakao.com">maketk@kakao.com</a>',
-    // Disclaimer
-    disclaimer: '<strong>⚠ 투자 위험 고지</strong><br><br>본 인디케이터는 자동매매 시스템이 아니며, 투자 결과에 대한 수익을 보장하지 않습니다. 모든 투자 결정은 본인의 판단과 책임 하에 이루어져야 합니다. 과거의 성과(백테스트 승률)는 미래의 수익을 보장하지 않습니다. 선물 거래는 원금 손실을 초과하는 손실이 발생할 수 있습니다.',
-    // CTA Band
-    ctaTitle: '천천히, <em>오래</em>,<br>살아남아라.',
-    ctaBtn: '▶ 지금 시작하기',
-    // Alerts
-    alertName: '이름을 입력해주세요.',
-    alertEmail: '이메일을 입력해주세요.',
-    alertTv: '트레이딩뷰 아이디를 입력해주세요.',
-    alertExp: '트레이딩 경험을 선택해주세요.',
-    alertAgree: '체험 조건에 동의해주세요.',
-    alertDupe: '이미 신청이 완료되었습니다.',
-    alertProcessing: '// 처리 중…',
-    alertError: '오류가 발생했습니다. 다시 시도해주세요.',
-  },
-  en: {
-    noticeBanner: '⚠ SITE UNDER PREPARATION &nbsp;·&nbsp; Do not purchase yet — service not yet open.',
-    navFeatures: 'FEATURES',
-    navTrial: 'FREE TRIAL',
-    navPricing: 'PRICING',
-    navCta: 'FREE TRIAL',
-    heroLabel: 'NASDAQ 5MIN · MICRO CONTRACT OPTIMIZED',
-    heroSub: 'SURVIVE LONGER. WIN SMARTER.',
-    heroDesc: 'Built by a prop trader — 7 years of NASDAQ backtesting,<br><strong>~70% average annual win rate</strong> system indicator.<br>Not an auto-trader — a tool to <strong>amplify your judgment</strong>.',
-    heroStatLbl1: 'WIN RATE', heroStatLbl2: 'BACKTEST', heroStatLbl3: 'TIMEFRAME', heroStatLbl4: 'MARKET',
-    heroBtnPrimary: '▶ Apply for Free Trial',
-    heroBtnGhost: 'Learn More ↓',
-    terminalEntry: 'MNQ Entry · TP +50pt · SL -100pt',
-    sig1: 'TP +50pt hit', sig2: 'TP +50pt hit', sig3: 'SL -100pt hit', sig4: 'TP +50pt hit',
-    stat1Sub: 'Based on 7-yr NASDAQ backtest',
-    stat2Sub: 'Live data 2018 – 2025',
-    stat3Sub: 'Optimized for NASDAQ Micro',
-    stat4Sub: 'SL 100pt · TP 50pt basis',
-    philSection: 'PHILOSOPHY',
-    philTitle: 'Slow like a <em>turtle</em>, but certain',
-    philDesc: 'Real trading is about surviving long, not chasing fast profits.',
-    phil1Title: 'SYSTEM FIRST', phil1Text: 'Enter by system, not emotion. Signals fire only under conditions validated by 7 years of backtesting.',
-    phil2Title: 'RISK CONTROL', phil2Text: "Don't lose big — build small gains repeatedly. A repeat-trading system engineered around win rate.",
-    phil3Title: 'SURVIVE LONGER', phil3Text: 'Slow, steady, survive. The turtle wins in the end. Our goal is long-term survival, not short-term returns.',
-    phil4Title: 'JUDGMENT AID', phil4Text: "Not auto-trading. A tool that sharpens your decision-making. Signals are for reference — final calls are always yours.",
-    featSection: 'SYSTEM FEATURES',
-    featTitle: 'Indicator <em>Core Features</em>',
-    feat1Title: 'PA-Based Real-Time Signals', feat1Text: 'Delivers real-time long/short entry signals on the NASDAQ 5-minute chart based on Price Action (PA). High-confidence signals with minimized noise.',
-    feat2Title: 'Auto SL/TP Lines', feat2Text: 'When a signal fires, SL (−100pt) and TP (+50pt) lines appear automatically on the chart. You always know exactly where to exit.',
-    feat3Title: 'Telegram Instant Alerts', feat3Text: "Alerts are sent via Telegram the moment a signal fires. You don't need to watch the chart all day.",
-    feat4Title: '7-Year Backtest Validated', feat4Text: 'Strategy validated on 7 years of live data (2018–2025). ~70% average annual win rate, optimized risk-reward ratio.',
-    feat5Title: 'Remote Setup via TeamViewer', feat5Text: 'For those who find TradingView setup difficult, we support remote installation via TeamViewer. Beginners welcome.',
-    feat6Title: 'Ongoing Updates & Improvements', feat6Text: 'The indicator is continuously updated to adapt to market changes. Annual plan members receive lifetime updates for free.',
-    sigSection: 'SIGNAL LOG',
-    sigTitle: 'Actual <em>Signal</em> Records',
-    trialBadge: 'LIMITED · REVIEW BETA',
-    trialTitle: '<em>Free</em> 1-Week Trial',
-    trialSub: 'This is a review beta program. Available to the first <strong style="color:var(--text)">100 people</strong> only, one time each.<br>All we ask is one honest review after your trial. Check real signals for 7 days, no strings attached.',
-    counterLabel: 'Spots Remaining',
-    labelName: 'NAME', labelEmail: 'EMAIL', labelTv: 'TRADINGVIEW ID', labelExp: 'TRADING EXPERIENCE',
-    placeholderName: 'John Doe', selectDefault: 'Select',
-    expBeginner: 'Beginner (< 1 year)', expMid: 'Intermediate (1–3 years)', expAdv: 'Advanced (3+ years)',
-    agreeTitle: 'I agree to the trial conditions.',
-    agreeText: 'The 7-day free trial is available once per person. I agree to provide an honest review after the trial. This indicator does not guarantee investment returns; all trading decisions are made at my own risk.',
-    submitBtn: '▶ Apply for Free Trial',
-    successTitle: 'Application Complete',
-    successText: "We'll send your indicator access code to your email within 48 hours.<br>Check real signals for 7 days.",
-    successTg: '// Awaiting email confirmation…',
-    closedTitle: '[ TRIAL CLOSED ]',
-    closedText: 'The 100-slot free trial is now closed.<br>Start with a paid plan now, or review the plans below.',
-    closedLink: 'View Paid Plans →',
-    pricingSection: 'PRICING',
-    pricingTitle: 'Choose Your <em>Plan</em>',
-    monthlyNote: 'Renews monthly · Cancel anytime',
-    monthlyUnit: '/mo',
-    monthlyF1: 'TURTLE 20 PA indicator access',
-    monthlyF2: 'NASDAQ 5-min signals shared via Telegram',
-    monthlyF3: 'Basic setup + usage guide',
-    monthlyF4: 'Remote installation support via TeamViewer',
-    monthlyBtn: 'Start Monthly →',
-    yearlyNote: '37.5% discount · 4.5 months free',
-    yearlyUnit: '/year',
-    yearlyF1: 'TURTLE 20 PA indicator access',
-    yearlyF2: 'NASDAQ 5-min signals + Turtle Swing Strategy indicator',
-    yearlyF3: 'Basic setup + usage guide + long/short ratio program',
-    yearlyF4: 'Remote installation support via TeamViewer',
-    yearlyF5: 'Lifetime updates included',
-    yearlyBtn: 'Start Annual →',
-    payInfo: '<strong>// After payment</strong><br>Enter your TradingView ID at the link below and we will send your manual and approval email within 24 hours.<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSdWRpGoQ8iTFmgM8lqscg8dkTY-r7OWpi8MrpWjeCcu6vvvgQ/viewform?usp=dialog" target="_blank">👉 Submit Info →</a>&nbsp;&nbsp;|&nbsp;&nbsp;No email? Contact: <a href="mailto:maketk@kakao.com">maketk@kakao.com</a>',
-    disclaimer: '<strong>⚠ Investment Risk Disclaimer</strong><br><br>This indicator is not an automated trading system and does not guarantee investment returns. All investment decisions must be made at your own judgment and risk. Past performance (backtest win rate) does not guarantee future returns. Futures trading can result in losses exceeding your principal.',
-    ctaTitle: 'Slow. <em>Steady.</em><br>Survive.',
-    ctaBtn: '▶ Get Started Now',
-    alertName: 'Please enter your name.',
-    alertEmail: 'Please enter your email.',
-    alertTv: 'Please enter your TradingView ID.',
-    alertExp: 'Please select your trading experience.',
-    alertAgree: 'Please agree to the trial conditions.',
-    alertDupe: 'You have already applied.',
-    alertProcessing: '// Processing…',
-    alertError: 'An error occurred. Please try again.',
-  }
-};
-
-function applyLanguage(lang) {
-  const t = translations[lang];
-  window._currentLang = lang;
-
-  // Notice Banner
-  const nb = document.querySelector('.notice-banner');
-  if (nb) nb.innerHTML = '<span class="notice-dot"></span>' + t.noticeBanner;
-
-  // Nav links
-  const navLinks = document.querySelectorAll('.nav-link');
-  const navLinkKeys = ['navFeatures','navTrial','navPricing'];
-  navLinks.forEach((el,i) => { if(navLinkKeys[i]) el.textContent = t[navLinkKeys[i]]; });
-  const navCta = document.querySelector('.nav-cta');
-  if (navCta) navCta.textContent = t.navCta;
-
-  // Hero
-  const heroLabel = document.querySelector('.terminal-label');
-  if (heroLabel) heroLabel.innerHTML = t.heroLabel + ' <span class="cursor-blink"></span>';
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) heroSub.textContent = t.heroSub;
-  const heroDesc = document.querySelector('.hero-desc');
-  if (heroDesc) heroDesc.innerHTML = t.heroDesc;
-
-  // Hero stat labels
-  const hStatLbls = document.querySelectorAll('.h-stat-lbl');
-  const hStatKeys = ['heroStatLbl1','heroStatLbl2','heroStatLbl3','heroStatLbl4'];
-  hStatLbls.forEach((el,i) => { if(hStatKeys[i]) el.textContent = t[hStatKeys[i]]; });
-
-  // Hero buttons
-  const heroBtns = document.querySelectorAll('.hero-actions a');
-  if (heroBtns[0]) heroBtns[0].textContent = t.heroBtnPrimary;
-  if (heroBtns[1]) heroBtns[1].textContent = t.heroBtnGhost;
-
-  // Terminal entry label
-  const terminalEntry = document.getElementById('terminal-entry-label');
-  if (terminalEntry) terminalEntry.textContent = t.terminalEntry;
-
-  // Signal log descriptions in terminal
-  ['sig1','sig2','sig3','sig4'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = t[id];
-  });
-
-  // Stats sub labels
-  const statSubs = document.querySelectorAll('.stat-sub');
-  const statSubKeys = ['stat1Sub','stat2Sub','stat3Sub','stat4Sub'];
-  statSubs.forEach((el,i) => { if(statSubKeys[i]) el.textContent = t[statSubKeys[i]]; });
-
-  // Philosophy section
-  const philSectionLabel = document.querySelector('#features .section-label');
-  if (philSectionLabel) philSectionLabel.textContent = t.philSection;
-  const philTitle = document.querySelector('#features .section-title');
-  if (philTitle) philTitle.innerHTML = t.philTitle;
-  const philDesc = document.querySelector('#features .section-desc');
-  if (philDesc) philDesc.textContent = t.philDesc;
-
-  const philItems = document.querySelectorAll('.phil-item');
-  const philData = [
-    {title:'phil1Title',text:'phil1Text'},
-    {title:'phil2Title',text:'phil2Text'},
-    {title:'phil3Title',text:'phil3Text'},
-    {title:'phil4Title',text:'phil4Text'},
-  ];
-  philItems.forEach((item,i) => {
-    if (philData[i]) {
-      const h3 = item.querySelector('h3');
-      const p = item.querySelector('p');
-      if (h3) h3.textContent = t[philData[i].title];
-      if (p) p.textContent = t[philData[i].text];
-    }
-  });
-
-  // Features grid section label & title
-  const featSectionLabel = document.getElementById('feat-section-label');
-  if (featSectionLabel) featSectionLabel.textContent = t.featSection;
-  const featTitleEl = document.getElementById('feat-section-title');
-  if (featTitleEl) featTitleEl.innerHTML = t.featTitle;
-
-  const featCells = document.querySelectorAll('.feat-cell');
-  const featData = [
-    {title:'feat1Title',text:'feat1Text'},
-    {title:'feat2Title',text:'feat2Text'},
-    {title:'feat3Title',text:'feat3Text'},
-    {title:'feat4Title',text:'feat4Text'},
-    {title:'feat5Title',text:'feat5Text'},
-    {title:'feat6Title',text:'feat6Text'},
-  ];
-  featCells.forEach((cell,i) => {
-    if (featData[i]) {
-      const h3 = cell.querySelector('h3');
-      const p = cell.querySelector('p');
-      if (h3) h3.textContent = t[featData[i].title];
-      if (p) p.textContent = t[featData[i].text];
-    }
-  });
-
-  // Signal section
-  const sigSectionLabel = document.querySelector('.signal-section .section-label');
-  if (sigSectionLabel) sigSectionLabel.textContent = t.sigSection;
-  const sigTitle = document.querySelector('.signal-section .section-title');
-  if (sigTitle) sigTitle.innerHTML = t.sigTitle;
-
-  // Signal log descriptions in chart-full section
-  const logSigDescs = document.querySelectorAll('.log-row');
-  // These are in the chart-full log-grid, no text to change (they're already in EN)
-
-  // Trial section
-  const trialBadge = document.querySelector('.trial-badge');
-  if (trialBadge) trialBadge.innerHTML = '<span class="pulse"></span>' + t.trialBadge;
-  const trialTitle = document.querySelector('.trial-title');
-  if (trialTitle) trialTitle.innerHTML = t.trialTitle;
-  const trialSub = document.querySelector('.trial-sub');
-  if (trialSub) trialSub.innerHTML = t.trialSub;
-  const counterLabel = document.querySelector('.counter-label');
-  if (counterLabel) counterLabel.textContent = t.counterLabel;
-
-  // Form labels
-  const fieldLabels = document.querySelectorAll('.trial-field label');
-  const labelKeys = ['labelName','labelEmail','labelTv','labelExp'];
-  fieldLabels.forEach((el,i) => { if(labelKeys[i]) el.textContent = t[labelKeys[i]]; });
-
-  // Placeholder
-  const nameInput = document.getElementById('tf-name');
-  if (nameInput) nameInput.placeholder = t.placeholderName;
-
-  // Select options
-  const expSelect = document.getElementById('tf-exp');
-  if (expSelect) {
-    expSelect.options[0].text = t.selectDefault;
-    expSelect.options[1].text = t.expBeginner;
-    expSelect.options[2].text = t.expMid;
-    expSelect.options[3].text = t.expAdv;
-  }
-
-  // Agree text
-  const agreeSpan = document.getElementById('agree-text');
-  if (agreeSpan) {
-    agreeSpan.innerHTML = '<strong>' + t.agreeTitle + '</strong><br>' + t.agreeText;
-  }
-
-  // Submit button
-  const submitBtn = document.getElementById('trialSubmit');
-  if (submitBtn && !submitBtn.disabled) submitBtn.textContent = t.submitBtn;
-
-  // Success
-  const successH3 = document.querySelector('.trial-success h3');
-  if (successH3) successH3.textContent = t.successTitle;
-  const successP = document.querySelector('.trial-success p');
-  if (successP) successP.innerHTML = t.successText;
-  const successTg = document.querySelector('.success-tg');
-  if (successTg) successTg.textContent = t.successTg;
-
-  // Closed
-  const closedH3 = document.querySelector('.trial-closed h3');
-  if (closedH3) closedH3.textContent = t.closedTitle;
-  const closedP = document.querySelector('.trial-closed p');
-  if (closedP) closedP.innerHTML = t.closedText;
-  const closedA = document.querySelector('.trial-closed a');
-  if (closedA) closedA.textContent = t.closedLink;
-
-  // Pricing
-  const pricingSectionLabel = document.querySelector('.pricing-section .section-label');
-  if (pricingSectionLabel) pricingSectionLabel.textContent = t.pricingSection;
-  const pricingTitle = document.querySelector('.pricing-section .section-title');
-  if (pricingTitle) pricingTitle.innerHTML = t.pricingTitle;
-
-  const cards = document.querySelectorAll('.price-card');
-  if (cards[0]) {
-    const note = cards[0].querySelector('.price-note');
-    if (note) note.textContent = t.monthlyNote;
-    const unit = cards[0].querySelector('.unit');
-    if (unit) unit.textContent = t.monthlyUnit;
-    const features = cards[0].querySelectorAll('.price-features li');
-    const monthlyFKeys = ['monthlyF1','monthlyF2','monthlyF3','monthlyF4'];
-    features.forEach((li,i) => { if(monthlyFKeys[i]) li.textContent = t[monthlyFKeys[i]]; });
-    const btn = cards[0].querySelector('.price-btn');
-    if (btn) btn.textContent = t.monthlyBtn;
-  }
-  if (cards[1]) {
-    const note = cards[1].querySelector('.price-note');
-    if (note) note.textContent = t.yearlyNote;
-    const unit = cards[1].querySelector('.unit');
-    if (unit) unit.textContent = t.yearlyUnit;
-    const features = cards[1].querySelectorAll('.price-features li');
-    const yearlyFKeys = ['yearlyF1','yearlyF2','yearlyF3','yearlyF4','yearlyF5'];
-    features.forEach((li,i) => { if(yearlyFKeys[i]) li.textContent = t[yearlyFKeys[i]]; });
-    const btn = cards[1].querySelector('.price-btn');
-    if (btn) btn.textContent = t.yearlyBtn;
-  }
-
-  // Pay info
-  const payInfo = document.querySelector('.pay-info p');
-  if (payInfo) payInfo.innerHTML = t.payInfo;
-
-  // Disclaimer
-  const disclaimer = document.querySelector('.disclaimer p');
-  if (disclaimer) disclaimer.innerHTML = t.disclaimer;
-
-  // CTA Band
-  const ctaH2 = document.querySelector('.cta-band h2');
-  if (ctaH2) ctaH2.innerHTML = t.ctaTitle;
-  const ctaBtn = document.querySelector('.cta-band .btn-primary');
-  if (ctaBtn) ctaBtn.textContent = t.ctaBtn;
-
-  // Show/hide Korean-only features
-  document.querySelectorAll('.ko-only').forEach(el => {
-    if (lang === 'ko') {
-      el.style.display = el.tagName === 'LI' ? 'flex' : '';
-    } else {
-      el.style.display = 'none';
-    }
-  });
-
-  // Update toggle button text
-  const toggle = document.getElementById('langToggle');
-  if (toggle) toggle.textContent = lang === 'ko' ? 'EN' : '한';
-}
-
-function toggleLanguage() {
-  const newLang = window._currentLang === 'ko' ? 'en' : 'ko';
-  applyLanguage(newLang);
-}
-
-// Patch submitTrial to use translated alerts
-const _origSubmit = window.submitTrial;
-window.submitTrialPatched = async function() {
-  const t = translations[window._currentLang || 'ko'];
-  const name   = document.getElementById('tf-name').value.trim();
-  const tg     = document.getElementById('tf-tg').value.trim();
-  const tv     = document.getElementById('tf-tv').value.trim();
-  const exp    = document.getElementById('tf-exp').value;
-  const agreed = document.getElementById('tf-agree').checked;
-
-  if (!name)   { alert(t.alertName); return; }
-  if (!tg)     { alert(t.alertEmail); return; }
-  if (!tv)     { alert(t.alertTv); return; }
-  if (!exp)    { alert(t.alertExp); return; }
-  if (!agreed) { alert(t.alertAgree); return; }
-
-  if (localStorage.getItem('turtle_trial_v1')) { alert(t.alertDupe); return; }
-
-  const btn = document.getElementById('trialSubmit');
-  btn.disabled = true;
-  btn.textContent = t.alertProcessing;
-
-  try {
-    // call original firebase logic via re-implementing
-    const { initializeApp, getApps } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js");
-    const { getFirestore, doc, setDoc, updateDoc, increment } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
-    const apps = getApps();
-    const app = apps.length ? apps[0] : initializeApp({apiKey:"AIzaSyB4LOIJ_2PvWphrEiv_b5_ucc8FkJNUsfM",authDomain:"turtle20pa.firebaseapp.com",projectId:"turtle20pa",storageBucket:"turtle20pa.firebasestorage.app",messagingSenderId:"196143877499",appId:"1:196143877499:web:1e73e1b11648ed1ff601de"});
-    const db = getFirestore(app);
-    const counterRef = doc(db, 'trial', 'counter');
-    const applyRef = doc(db, 'trial', 'applicants_' + Date.now());
-    await setDoc(applyRef, { name, email: tg, tradingview: tv, exp, ts: new Date() });
-    await updateDoc(counterRef, { count: increment(1) });
-    localStorage.setItem('turtle_trial_v1', JSON.stringify({ name, tg, tv, exp, ts: Date.now() }));
-    document.getElementById('trialFormWrap').style.display = 'none';
-    document.getElementById('trialSuccess').style.display = 'block';
-    document.getElementById('trialSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    // re-apply language to update success message
-    applyLanguage(window._currentLang || 'ko');
-  } catch(e) {
-    btn.disabled = false;
-    btn.textContent = t.submitBtn;
-    alert(t.alertError);
-  }
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Inject toggle button into nav
-  const navRight = document.querySelector('.nav-right');
-  if (navRight) {
-    const btn = document.createElement('button');
-    btn.id = 'langToggle';
-    btn.onclick = toggleLanguage;
-    btn.style.cssText = `
-      font-family: var(--orb);
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      color: var(--green);
-      background: transparent;
-      border: 1px solid var(--green);
-      padding: 7px 14px;
-      cursor: pointer;
-      transition: all .2s;
-      text-transform: uppercase;
-    `;
-    btn.textContent = 'EN';
-    btn.addEventListener('mouseenter', () => { btn.style.background = 'rgba(0,255,157,0.1)'; });
-    btn.addEventListener('mouseleave', () => { btn.style.background = 'transparent'; });
-    navRight.insertBefore(btn, navRight.firstChild);
-  }
-
-  // Set initial language — auto-switch to EN if URL hash is #en
-  const initLang = window.location.hash.toLowerCase() === '#en' ? 'en' : 'ko';
-  applyLanguage(initLang);
-
-  // Override submit button onclick
-  const submitBtn = document.getElementById('trialSubmit');
-  if (submitBtn) {
-    submitBtn.setAttribute('onclick', 'submitTrialPatched()');
-  }
-});
-</script>
+</html>
