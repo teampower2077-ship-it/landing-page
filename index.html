@@ -2110,7 +2110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Set initial language — auto-switch to EN if URL hash is #en
-  const initLang = window.location.hash === '#en' ? 'en' : 'ko';
+  const initLang = window.location.hash.toLowerCase() === '#en' ? 'en' : 'ko';
   applyLanguage(initLang);
 
   // Override submit button onclick
