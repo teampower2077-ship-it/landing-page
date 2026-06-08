@@ -74,6 +74,164 @@ body::after {
   0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:0.94} 94%{opacity:1} 97%{opacity:0.97} 98%{opacity:1}
 }
 
+/* ── BRIEFING SECTION ── */
+.briefing-section {
+  padding: 80px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.briefing-latest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text3);
+  border: 1px solid rgba(61,107,82,0.3);
+  padding: 4px 12px;
+  margin-bottom: 32px;
+  background: rgba(0,0,0,0.2);
+}
+.briefing-preview-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-top: 40px;
+  border: 1px solid rgba(0,255,157,0.07);
+  background: rgba(0,255,157,0.04);
+}
+.briefing-panel {
+  background: #060d14;
+  padding: 28px;
+  border-right: 1px solid rgba(0,255,157,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.briefing-panel:last-child { border-right: none; }
+.briefing-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+}
+.bp-cyan::before  { background: linear-gradient(90deg, rgba(0,200,255,0.3), transparent); }
+.bp-green::before { background: linear-gradient(90deg, rgba(0,255,157,0.25), transparent); }
+.bp-amber::before { background: linear-gradient(90deg, rgba(255,179,0,0.25), transparent); }
+.bp-red::before   { background: linear-gradient(90deg, rgba(255,61,90,0.25), transparent); }
+.briefing-panel-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #2d4d3a;
+  margin-bottom: 16px;
+}
+.briefing-issue-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,255,157,0.04);
+}
+.briefing-issue-row:last-child { border-bottom: none; }
+.bi-tag {
+  font-family: var(--mono);
+  font-size: 8px;
+  padding: 2px 6px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.bi-bull  { background: rgba(0,255,157,0.05); color: #2a7a52; border: 1px solid rgba(0,255,157,0.12); }
+.bi-bear  { background: rgba(255,61,90,0.05); color: #7a2a36; border: 1px solid rgba(255,61,90,0.12); }
+.bi-watch { background: rgba(0,200,255,0.05); color: #1e5a70; border: 1px solid rgba(0,200,255,0.12); }
+.bi-title { font-size: 12px; color: #6a8f7a; font-weight: 500; line-height: 1.5; }
+.bi-desc  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.6; }
+.briefing-event-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,255,157,0.04);
+}
+.briefing-event-row:last-child { border-bottom: none; }
+.be-time {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #1e5a70;
+  min-width: 80px;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+.be-event { font-size: 12px; color: #6a8f7a; font-weight: 500; }
+.be-note  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.5; }
+.briefing-trade-row {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,255,157,0.06);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.bt-dir { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bt-long  { background: rgba(0,255,157,0.12); color: #2a7a52; border: 1px solid rgba(0,255,157,0.2); font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-short { background: rgba(255,61,90,0.1);  color: #7a2a36; border: 1px solid rgba(255,61,90,0.2);  font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-label { font-size: 11px; color: #4a6a58; font-weight: 500; }
+.bt-grid  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.bt-item-lbl { font-family: var(--mono); font-size: 8px; color: #2d4d3a; letter-spacing: 1px; margin-bottom: 2px; }
+.bt-item-val { font-family: var(--mono); font-size: 13px; font-weight: 700; }
+.bt-g { color: #2a6645; }
+.bt-r { color: #662030; }
+.briefing-lock-overlay {
+  grid-column: 1 / -1;
+  background: #050b10;
+  border: 1px solid rgba(0,255,157,0.07);
+  border-top: 1px solid rgba(0,255,157,0.04);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.blo-text { font-size: 11px; color: var(--text3); line-height: 1.8; }
+.blo-text strong { color: #3d6b52; font-weight: 500; }
+.blo-cta {
+  font-family: var(--orb);
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #3d6b52;
+  background: transparent;
+  border: 1px solid rgba(0,255,157,0.2);
+  padding: 10px 24px;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all .3s;
+}
+.blo-cta:hover { color: var(--green); border-color: rgba(0,255,157,0.5); background: rgba(0,255,157,0.04); }
+.briefing-full-wrap {
+  grid-column: 1 / -1;
+  border: 1px solid rgba(0,255,157,0.1);
+  border-top: none;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,255,157,0.02);
+}
+.bfw-label { font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: 2px; }
+.bfw-link {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(0,255,157,0.3);
+  padding-bottom: 1px;
+  transition: all .2s;
+}
+.bfw-link:hover { border-bottom-color: var(--green); }
+
 /* ── NOTICE BANNER ── */
 .notice-banner {
   width: 100%;
@@ -1009,7 +1167,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 
   <div class="nav-right">
     <a href="#features" class="nav-link">FEATURES</a>
-    <a href="#free-trial" class="nav-link">FREE TRIAL</a>
+    <a href="#briefing" class="nav-link">BRIEFING</a>
     <a href="#pricing" class="nav-link">PRICING</a>
     <a href="#free-trial" class="nav-cta">무료체험</a>
   </div>
@@ -1327,30 +1485,69 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
             <span style="background:rgba(0,255,157,0.13);border:1px solid rgba(0,255,157,0.35);color:#00ff9d;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:1px;padding:4px 10px;">▲ LONG +$100</span>
           </div>
         </div>
-      <div class="log-grid">
+      <div class="log-grid" style="grid-template-columns:repeat(4,1fr);">
         <div class="log-row">
           <span class="log-time">09:35</span>
           <span class="sig-badge sb-l">LONG</span>
           <span class="log-price">TP +50pt</span>
-          <span class="log-result w">+$100 ✓</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
         </div>
         <div class="log-row">
           <span class="log-time">10:20</span>
           <span class="sig-badge sb-l">LONG</span>
           <span class="log-price">TP +50pt</span>
-          <span class="log-result w">+$100 ✓</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
         </div>
         <div class="log-row">
           <span class="log-time">11:04</span>
           <span class="sig-badge sb-l">LONG</span>
           <span class="log-price">SL −100pt</span>
-          <span class="log-result l">−$200 ✗</span>
+          <span class="log-result l" style="margin-left:auto;">−$200 ✗</span>
         </div>
         <div class="log-row">
           <span class="log-time">13:40</span>
           <span class="sig-badge sb-l">LONG</span>
           <span class="log-price">TP +50pt</span>
-          <span class="log-result w">+$100 ✓</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
+        </div>
+        <div class="log-row">
+          <span class="log-time">14:10</span>
+          <span class="sig-badge sb-l">LONG</span>
+          <span class="log-price">TP +50pt</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
+        </div>
+        <div class="log-row">
+          <span class="log-time">14:50</span>
+          <span class="sig-badge sb-l">LONG</span>
+          <span class="log-price">SL −100pt</span>
+          <span class="log-result l" style="margin-left:auto;">−$200 ✗</span>
+        </div>
+        <div class="log-row">
+          <span class="log-time">15:25</span>
+          <span class="sig-badge sb-l">LONG</span>
+          <span class="log-price">TP +50pt</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
+        </div>
+        <div class="log-row">
+          <span class="log-time">15:50</span>
+          <span class="sig-badge sb-l">LONG</span>
+          <span class="log-price">TP +50pt</span>
+          <span class="log-result w" style="margin-left:auto;">+$100 ✓</span>
+        </div>
+      </div>
+      <!-- 하루 예상수익 합계 -->
+      <div style="
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:14px 20px;
+        border-top:1px solid rgba(0,255,157,0.25);
+        background:rgba(0,255,157,0.04);
+      ">
+        <span style="font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:3px;">// 하루 예상수익 (MNQ 1계약 기준)</span>
+        <div style="display:flex;align-items:baseline;gap:10px;">
+          <span style="font-size:9px;color:var(--text3);letter-spacing:2px;">6승 2패 →</span>
+          <span style="font-family:var(--orb);font-size:22px;font-weight:700;color:var(--green);text-shadow:0 0 16px rgba(0,255,157,0.4);">+$200</span>
         </div>
       </div>
     </div>
@@ -1436,6 +1633,225 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
   </div>
 </section>
 
+<!-- BRIEFING -->
+<section id="briefing" style="border-bottom: 1px solid var(--line);">
+  <div class="briefing-section">
+    <div class="section-label">MORNING BRIEFING</div>
+    <div class="section-title">매일 오전 8시,<br><em>오늘의 나스닥</em></div>
+    <p class="section-desc" style="max-width:520px;margin-top:12px;">
+      회원에게 매일 아침 8시 발송되는 NQ 데일리 브리핑입니다.<br>
+      핵심 이슈 · 진입 조건 · 주요 일정을 한 페이지로 정리합니다.
+    </p>
+
+    <div class="briefing-latest-badge">
+      <span style="display:inline-block;width:6px;height:6px;background:#2d4d3a;border-radius:50%;animation:blink 1.2s infinite;"></span>
+      LATEST · 2026.06.01 · 1차 브리핑
+    </div>
+
+    <!-- 2×2 프리뷰 그리드 -->
+    <div class="briefing-preview-wrap">
+
+      <!-- 오늘 핵심 이슈 -->
+      <div class="briefing-panel bp-cyan">
+        <div class="briefing-panel-label">// 오늘 핵심 이슈</div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-bull">BULL</span>
+          <div>
+            <div class="bi-title">DELL 어닝 서프라이즈 — AI 서버 수요 폭증</div>
+            <div class="bi-desc">매출 $438억(예상比 +24%), 시간외 +32~39%. NQ 전체 테크에 상승 동력 제공</div>
+          </div>
+        </div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-watch">WATCH</span>
+          <div>
+            <div class="bi-title">미·이란 60일 휴전 MOU — 트럼프 최종 승인 대기</div>
+            <div class="bi-desc">협상 결렬 시 유가 즉시 급등 위험. 오늘 트럼프 발언이 핵심 변수</div>
+          </div>
+        </div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-bear">RISK</span>
+          <div>
+            <div class="bi-title">이번 주 PMI·고용 지표 집중 발표</div>
+            <div class="bi-desc">ISM(오늘) → JOLTS(6/3) → ADP(6/4) → NFP(6/6). 나쁜 지표 하나에도 차익실현 가능</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 진입 조건 -->
+      <div class="briefing-panel bp-green">
+        <div class="briefing-panel-label">// 오늘 진입 시나리오</div>
+        <div class="briefing-trade-row">
+          <div class="bt-dir">
+            <div class="bt-long">LONG</div>
+            <div class="bt-label">신고점 돌파 추세 추종</div>
+          </div>
+          <div class="bt-grid">
+            <div>
+              <div class="bt-item-lbl">ENTRY</div>
+              <div class="bt-item-val bt-g">30,550 돌파</div>
+            </div>
+            <div>
+              <div class="bt-item-lbl">TP1 / TP2</div>
+              <div class="bt-item-val bt-g">30,800 / 31,000</div>
+            </div>
+            <div>
+              <div class="bt-item-lbl">STOP</div>
+              <div class="bt-item-val bt-r">30,300</div>
+            </div>
+          </div>
+        </div>
+        <div class="briefing-trade-row">
+          <div class="bt-dir">
+            <div class="bt-short">SHORT</div>
+            <div class="bt-label">신고점 저항 후 되돌림</div>
+          </div>
+          <div class="bt-grid">
+            <div>
+              <div class="bt-item-lbl">ENTRY</div>
+              <div class="bt-item-val bt-r">30,700~31,000</div>
+            </div>
+            <div>
+              <div class="bt-item-lbl">TP1 / TP2</div>
+              <div class="bt-item-val bt-g">30,400 / 30,100</div>
+            </div>
+            <div>
+              <div class="bt-item-lbl">STOP</div>
+              <div class="bt-item-val bt-r">31,250</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 오늘 시간표 -->
+      <div class="briefing-panel bp-amber">
+        <div class="briefing-panel-label">// 오늘 주요 시간표 (KST)</div>
+        <div class="briefing-event-row">
+          <div class="be-time">22:30</div>
+          <div>
+            <div class="be-event">🔔 미국 정규장 개장</div>
+            <div class="be-note">개장 첫 15분 변동성 극대화. 방향 확정 후 진입 필수</div>
+          </div>
+        </div>
+        <div class="briefing-event-row">
+          <div class="be-time" style="color:#5a2a30">23:00 🔥🔥</div>
+          <div>
+            <div class="be-event">🚨 ISM 제조업 PMI 발표</div>
+            <div class="be-note" style="color:#3d3020">오늘 최대 이벤트. 50 미만이면 NQ 즉시 급락 가능. 발표 전후 진입 금지</div>
+          </div>
+        </div>
+        <div class="briefing-event-row">
+          <div class="be-time">장중</div>
+          <div>
+            <div class="be-event">🛢️ 이란·트럼프 헤드라인</div>
+            <div class="be-note">언제든 나올 수 있음. 승인 = 유가 급락+NQ 급등 / 거부 = 반대</div>
+          </div>
+        </div>
+        <div class="briefing-event-row">
+          <div class="be-time" style="color:#5a2a30">6/6 NFP 🔥🔥🔥</div>
+          <div>
+            <div class="be-event">🚨 5월 비농업고용 발표</div>
+            <div class="be-note">이번 주 최대 이벤트. 발표 전후 포지션 보유 절대 금지</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주요 실적 -->
+      <div class="briefing-panel bp-red">
+        <div class="briefing-panel-label">// 주요 실적 / 이번 주 예정</div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-bull">BEAT</span>
+          <div>
+            <div class="bi-title">DELL · Q1 FY2027</div>
+            <div class="bi-desc">EPS $4.86 (예상 $2.94 대비 +65%). AI 서버 +757% YoY. 시간외 +32~39%</div>
+          </div>
+        </div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-watch">예정</span>
+          <div>
+            <div class="bi-title">Salesforce(CRM) · 6/4(목)</div>
+            <div class="bi-desc">에이전틱 AI(Agentforce) 매출 주목. 예상 상회 시 NQ 추가 동력</div>
+          </div>
+        </div>
+        <div class="briefing-issue-row">
+          <span class="bi-tag bi-watch">예정</span>
+          <div>
+            <div class="bi-title">Broadcom(AVGO) · 6/5(금)</div>
+            <div class="bi-desc">구글·메타향 커스텀 AI 칩(XPU) 매출 가이던스가 핵심</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 멤버십 전용 오버레이 -->
+      <div style="
+        grid-column: 1 / -1;
+        background: #040a0f;
+        border-top: 1px solid rgba(0,255,157,0.06);
+        padding: 48px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+      ">
+        <!-- 거북이 SVG -->
+        <div style="opacity:0.18;">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- shell -->
+            <ellipse cx="40" cy="38" rx="22" ry="18" fill="#00ff9d" opacity="0.15" stroke="#00ff9d" stroke-width="0.8"/>
+            <!-- shell hexagon pattern -->
+            <ellipse cx="40" cy="38" rx="10" ry="8" fill="none" stroke="#00ff9d" stroke-width="0.6"/>
+            <line x1="30" y1="34" x2="24" y2="30" stroke="#00ff9d" stroke-width="0.5"/>
+            <line x1="50" y1="34" x2="56" y2="30" stroke="#00ff9d" stroke-width="0.5"/>
+            <line x1="30" y1="42" x2="24" y2="46" stroke="#00ff9d" stroke-width="0.5"/>
+            <line x1="50" y1="42" x2="56" y2="46" stroke="#00ff9d" stroke-width="0.5"/>
+            <line x1="40" y1="30" x2="40" y2="24" stroke="#00ff9d" stroke-width="0.5"/>
+            <line x1="40" y1="46" x2="40" y2="52" stroke="#00ff9d" stroke-width="0.5"/>
+            <!-- head -->
+            <ellipse cx="40" cy="22" rx="7" ry="5.5" fill="#00ff9d" opacity="0.15" stroke="#00ff9d" stroke-width="0.8"/>
+            <!-- eye -->
+            <circle cx="37.5" cy="21" r="1" fill="#00ff9d" opacity="0.6"/>
+            <!-- neck -->
+            <rect x="37" y="26" width="6" height="5" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.5"/>
+            <!-- front legs -->
+            <ellipse cx="22" cy="33" rx="5" ry="3" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.7" transform="rotate(-20 22 33)"/>
+            <ellipse cx="58" cy="33" rx="5" ry="3" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.7" transform="rotate(20 58 33)"/>
+            <!-- back legs -->
+            <ellipse cx="23" cy="47" rx="5" ry="3" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.7" transform="rotate(20 23 47)"/>
+            <ellipse cx="57" cy="47" rx="5" ry="3" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.7" transform="rotate(-20 57 47)"/>
+            <!-- tail -->
+            <path d="M40 56 Q42 62 40 66 Q38 62 40 56" fill="#00ff9d" opacity="0.1" stroke="#00ff9d" stroke-width="0.6"/>
+          </svg>
+        </div>
+
+        <!-- 텍스트 -->
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:4px;color:#1e3d2a;margin-bottom:10px;">// MEMBERS ONLY</div>
+          <div style="font-family:var(--orb);font-size:15px;font-weight:700;color:#2a5a3a;letter-spacing:2px;margin-bottom:6px;">멤버십 회원에게 제공됩니다</div>
+          <div style="font-family:var(--mono);font-size:10px;color:#1e3028;letter-spacing:1px;">매일 오전 8시 · 전체 브리핑 · 회원 전용</div>
+        </div>
+
+        <a href="#pricing" style="
+          font-family:var(--orb);
+          font-size:8px;
+          letter-spacing:2px;
+          color:#2a5a3a;
+          background:transparent;
+          border:1px solid rgba(0,255,157,0.15);
+          padding:9px 22px;
+          text-decoration:none;
+          font-weight:700;
+          transition:all .3s;
+          margin-top:4px;
+        " onmouseover="this.style.color='#00ff9d';this.style.borderColor='rgba(0,255,157,0.4)'" onmouseout="this.style.color='#2a5a3a';this.style.borderColor='rgba(0,255,157,0.15)'">
+          플랜 보기 →
+        </a>
+      </div>
+
+    </div><!-- end briefing-preview-wrap -->
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing" style="border-bottom: 1px solid var(--line);">
   <div class="pricing-section">
@@ -1446,11 +1862,11 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
       <div class="price-card">
         <div class="price-tier">// MONTHLY PLAN</div>
         <div class="price-num"><sup>$</sup>200<span class="unit">/월</span></div>
-        <div class="price-note">일회성 결제 · 연장은 고객센터 문의</div>
+        <div class="price-note">매월 갱신 · 언제든 취소 가능</div>
         <ul class="price-features">
           <li>TURTLE 20 PA 인디케이터 접근권</li>
           <li>나스닥 5분봉 시그널 텔레그램 공유</li>
-          <li>기본 세팅 + 활용 가이드 + 롱숏 비율 확인 프로그램</li>
+          <li>기본 세팅 + 활용 가이드 제공</li>
           <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>팀뷰어 원격 설치 지원</li>
         </ul>
@@ -1462,7 +1878,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         <div class="price-note">37.5% 할인 · 4.5개월 무료</div>
         <ul class="price-features">
           <li>TURTLE 20 PA 인디케이터 접근권</li>
-          <li>나스닥 5분봉 시그널 텔레그램 공유</li>
+          <li>나스닥 5분봉 시그널 + 터틀 스윙 전략 인디케이터</li>
           <li>기본 세팅 + 활용 가이드 + 롱숏 비율 확인 프로그램</li>
           <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>팀뷰어 원격 설치 지원</li>
