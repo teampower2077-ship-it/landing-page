@@ -25,8 +25,8 @@
   --line:      rgba(0,255,157,0.12);
   --line2:     rgba(0,255,157,0.22);
   --text:      #d4f5e8;
-  --text2:     #a0d4b8;
-  --text3:     #6aaa88;
+  --text2:     #7fbfa0;
+  --text3:     #3d6b52;
   --mono:      'IBM Plex Mono', 'Share Tech Mono', monospace;
   --vt:        'VT323', monospace;
   --orb:       'Orbitron', sans-serif;
@@ -87,8 +87,8 @@ body::after {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 3px;
-  color: #8ecfaa;
-  border: 1px solid rgba(100,180,130,0.4);
+  color: var(--text3);
+  border: 1px solid rgba(61,107,82,0.3);
   padding: 4px 12px;
   margin-bottom: 32px;
   background: rgba(0,0,0,0.2);
@@ -123,7 +123,7 @@ body::after {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 3px;
-  color: #5a9070;
+  color: #2d4d3a;
   margin-bottom: 16px;
 }
 .briefing-issue-row {
@@ -143,11 +143,11 @@ body::after {
   flex-shrink: 0;
   margin-top: 2px;
 }
-.bi-bull  { background: rgba(0,255,157,0.08); color: #4dbb82; border: 1px solid rgba(0,255,157,0.22); }
-.bi-bear  { background: rgba(255,61,90,0.08); color: #c45060; border: 1px solid rgba(255,61,90,0.22); }
-.bi-watch { background: rgba(0,200,255,0.08); color: #3a9bbb; border: 1px solid rgba(0,200,255,0.22); }
-.bi-title { font-size: 12px; color: #aad4bb; font-weight: 500; line-height: 1.5; }
-.bi-desc  { font-size: 10px; color: #6aaa88; margin-top: 2px; line-height: 1.6; }
+.bi-bull  { background: rgba(0,255,157,0.05); color: #2a7a52; border: 1px solid rgba(0,255,157,0.12); }
+.bi-bear  { background: rgba(255,61,90,0.05); color: #7a2a36; border: 1px solid rgba(255,61,90,0.12); }
+.bi-watch { background: rgba(0,200,255,0.05); color: #1e5a70; border: 1px solid rgba(0,200,255,0.12); }
+.bi-title { font-size: 12px; color: #6a8f7a; font-weight: 500; line-height: 1.5; }
+.bi-desc  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.6; }
 .briefing-event-row {
   display: flex;
   gap: 14px;
@@ -159,13 +159,13 @@ body::after {
 .be-time {
   font-family: var(--mono);
   font-size: 10px;
-  color: #3a9bbb;
+  color: #1e5a70;
   min-width: 80px;
   flex-shrink: 0;
   line-height: 1.5;
 }
-.be-event { font-size: 12px; color: #aad4bb; font-weight: 500; }
-.be-note  { font-size: 10px; color: #6aaa88; margin-top: 2px; line-height: 1.5; }
+.be-event { font-size: 12px; color: #6a8f7a; font-weight: 500; }
+.be-note  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.5; }
 .briefing-trade-row {
   background: rgba(0,0,0,0.25);
   border: 1px solid rgba(0,255,157,0.06);
@@ -173,14 +173,14 @@ body::after {
   margin-bottom: 10px;
 }
 .bt-dir { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.bt-long  { background: rgba(0,255,157,0.12); color: #4dbb82; border: 1px solid rgba(0,255,157,0.25); font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
-.bt-short { background: rgba(255,61,90,0.1);  color: #c45060; border: 1px solid rgba(255,61,90,0.25);  font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
-.bt-label { font-size: 11px; color: #8ecfaa; font-weight: 500; }
+.bt-long  { background: rgba(0,255,157,0.12); color: #2a7a52; border: 1px solid rgba(0,255,157,0.2); font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-short { background: rgba(255,61,90,0.1);  color: #7a2a36; border: 1px solid rgba(255,61,90,0.2);  font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-label { font-size: 11px; color: #4a6a58; font-weight: 500; }
 .bt-grid  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-.bt-item-lbl { font-family: var(--mono); font-size: 8px; color: #5a9070; letter-spacing: 1px; margin-bottom: 2px; }
+.bt-item-lbl { font-family: var(--mono); font-size: 8px; color: #2d4d3a; letter-spacing: 1px; margin-bottom: 2px; }
 .bt-item-val { font-family: var(--mono); font-size: 13px; font-weight: 700; }
-.bt-g { color: #4dbb82; }
-.bt-r { color: #c45060; }
+.bt-g { color: #2a6645; }
+.bt-r { color: #662030; }
 .briefing-lock-overlay {
   grid-column: 1 / -1;
   background: #050b10;
@@ -192,15 +192,15 @@ body::after {
   justify-content: space-between;
   gap: 24px;
 }
-.blo-text { font-size: 11px; color: #8ecfaa; line-height: 1.8; }
-.blo-text strong { color: #aad4bb; font-weight: 500; }
+.blo-text { font-size: 11px; color: var(--text3); line-height: 1.8; }
+.blo-text strong { color: #3d6b52; font-weight: 500; }
 .blo-cta {
   font-family: var(--orb);
   font-size: 8px;
   letter-spacing: 2px;
-  color: #8ecfaa;
+  color: #3d6b52;
   background: transparent;
-  border: 1px solid rgba(0,255,157,0.3);
+  border: 1px solid rgba(0,255,157,0.2);
   padding: 10px 24px;
   text-decoration: none;
   font-weight: 700;
@@ -1733,10 +1733,10 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           </div>
         </div>
         <div class="briefing-event-row">
-          <div class="be-time" style="color:#cc4455">23:00 🔥🔥</div>
+          <div class="be-time" style="color:#5a2a30">23:00 🔥🔥</div>
           <div>
             <div class="be-event">🚨 ISM 제조업 PMI 발표</div>
-            <div class="be-note" style="color:#b89050">오늘 최대 이벤트. 50 미만이면 NQ 즉시 급락 가능. 발표 전후 진입 금지</div>
+            <div class="be-note" style="color:#3d3020">오늘 최대 이벤트. 50 미만이면 NQ 즉시 급락 가능. 발표 전후 진입 금지</div>
           </div>
         </div>
         <div class="briefing-event-row">
@@ -1747,7 +1747,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           </div>
         </div>
         <div class="briefing-event-row">
-          <div class="be-time" style="color:#cc4455">6/6 NFP 🔥🔥🔥</div>
+          <div class="be-time" style="color:#5a2a30">6/6 NFP 🔥🔥🔥</div>
           <div>
             <div class="be-event">🚨 5월 비농업고용 발표</div>
             <div class="be-note">이번 주 최대 이벤트. 발표 전후 포지션 보유 절대 금지</div>
@@ -1826,16 +1826,16 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 
         <!-- 텍스트 -->
         <div>
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:4px;color:#5a9070;margin-bottom:10px;">// MEMBERS ONLY</div>
-          <div style="font-family:var(--orb);font-size:15px;font-weight:700;color:#8ecfaa;letter-spacing:2px;margin-bottom:6px;">멤버십 회원에게 제공됩니다</div>
-          <div style="font-family:var(--mono);font-size:10px;color:#6aaa88;letter-spacing:1px;">매일 오전 8시 · 전체 브리핑 · 회원 전용</div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:4px;color:#1e3d2a;margin-bottom:10px;">// MEMBERS ONLY</div>
+          <div style="font-family:var(--orb);font-size:15px;font-weight:700;color:#2a5a3a;letter-spacing:2px;margin-bottom:6px;">멤버십 회원에게 제공됩니다</div>
+          <div style="font-family:var(--mono);font-size:10px;color:#1e3028;letter-spacing:1px;">매일 오전 8시 · 전체 브리핑 · 회원 전용</div>
         </div>
 
         <a href="#pricing" style="
           font-family:var(--orb);
           font-size:8px;
           letter-spacing:2px;
-          color:#8ecfaa;
+          color:#2a5a3a;
           background:transparent;
           border:1px solid rgba(0,255,157,0.15);
           padding:9px 22px;
@@ -1930,7 +1930,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
     </div>
   </div>
   <p>© 2025 TURTLE 20 PA · ALL RIGHTS RESERVED</p>
-  <p style="margin-top:10px;font-size:10px;color:#5a9070;letter-spacing:1px;line-height:1.9;">
+  <p style="margin-top:10px;font-size:10px;color:#2d4d3a;letter-spacing:1px;line-height:1.9;">
     상호: 터틀인사이트 &nbsp;|&nbsp; 대표자: 황현석 &nbsp;|&nbsp; 사업자등록번호: xxx-xxx-xxx &nbsp;|&nbsp; 주소: 서울시 광진구 광나루로22나길 4
   </p>
 </footer>
