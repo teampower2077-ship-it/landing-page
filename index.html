@@ -25,8 +25,8 @@
   --line:      rgba(0,255,157,0.12);
   --line2:     rgba(0,255,157,0.22);
   --text:      #d4f5e8;
-  --text2:     #7fbfa0;
-  --text3:     #3d6b52;
+  --text2:     #a0d4b8;
+  --text3:     #6aaa88;
   --mono:      'IBM Plex Mono', 'Share Tech Mono', monospace;
   --vt:        'VT323', monospace;
   --orb:       'Orbitron', sans-serif;
@@ -87,8 +87,8 @@ body::after {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 3px;
-  color: var(--text3);
-  border: 1px solid rgba(61,107,82,0.3);
+  color: #8ecfaa;
+  border: 1px solid rgba(100,180,130,0.4);
   padding: 4px 12px;
   margin-bottom: 32px;
   background: rgba(0,0,0,0.2);
@@ -123,7 +123,7 @@ body::after {
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 3px;
-  color: #2d4d3a;
+  color: #5a9070;
   margin-bottom: 16px;
 }
 .briefing-issue-row {
@@ -143,11 +143,11 @@ body::after {
   flex-shrink: 0;
   margin-top: 2px;
 }
-.bi-bull  { background: rgba(0,255,157,0.05); color: #2a7a52; border: 1px solid rgba(0,255,157,0.12); }
-.bi-bear  { background: rgba(255,61,90,0.05); color: #7a2a36; border: 1px solid rgba(255,61,90,0.12); }
-.bi-watch { background: rgba(0,200,255,0.05); color: #1e5a70; border: 1px solid rgba(0,200,255,0.12); }
-.bi-title { font-size: 12px; color: #6a8f7a; font-weight: 500; line-height: 1.5; }
-.bi-desc  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.6; }
+.bi-bull  { background: rgba(0,255,157,0.08); color: #4dbb82; border: 1px solid rgba(0,255,157,0.22); }
+.bi-bear  { background: rgba(255,61,90,0.08); color: #c45060; border: 1px solid rgba(255,61,90,0.22); }
+.bi-watch { background: rgba(0,200,255,0.08); color: #3a9bbb; border: 1px solid rgba(0,200,255,0.22); }
+.bi-title { font-size: 12px; color: #aad4bb; font-weight: 500; line-height: 1.5; }
+.bi-desc  { font-size: 10px; color: #6aaa88; margin-top: 2px; line-height: 1.6; }
 .briefing-event-row {
   display: flex;
   gap: 14px;
@@ -159,13 +159,13 @@ body::after {
 .be-time {
   font-family: var(--mono);
   font-size: 10px;
-  color: #1e5a70;
+  color: #3a9bbb;
   min-width: 80px;
   flex-shrink: 0;
   line-height: 1.5;
 }
-.be-event { font-size: 12px; color: #6a8f7a; font-weight: 500; }
-.be-note  { font-size: 10px; color: var(--text3); margin-top: 2px; line-height: 1.5; }
+.be-event { font-size: 12px; color: #aad4bb; font-weight: 500; }
+.be-note  { font-size: 10px; color: #6aaa88; margin-top: 2px; line-height: 1.5; }
 .briefing-trade-row {
   background: rgba(0,0,0,0.25);
   border: 1px solid rgba(0,255,157,0.06);
@@ -173,14 +173,14 @@ body::after {
   margin-bottom: 10px;
 }
 .bt-dir { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.bt-long  { background: rgba(0,255,157,0.12); color: #2a7a52; border: 1px solid rgba(0,255,157,0.2); font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
-.bt-short { background: rgba(255,61,90,0.1);  color: #7a2a36; border: 1px solid rgba(255,61,90,0.2);  font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
-.bt-label { font-size: 11px; color: #4a6a58; font-weight: 500; }
+.bt-long  { background: rgba(0,255,157,0.12); color: #4dbb82; border: 1px solid rgba(0,255,157,0.25); font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-short { background: rgba(255,61,90,0.1);  color: #c45060; border: 1px solid rgba(255,61,90,0.25);  font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 10px; letter-spacing: 1px; }
+.bt-label { font-size: 11px; color: #8ecfaa; font-weight: 500; }
 .bt-grid  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-.bt-item-lbl { font-family: var(--mono); font-size: 8px; color: #2d4d3a; letter-spacing: 1px; margin-bottom: 2px; }
+.bt-item-lbl { font-family: var(--mono); font-size: 8px; color: #5a9070; letter-spacing: 1px; margin-bottom: 2px; }
 .bt-item-val { font-family: var(--mono); font-size: 13px; font-weight: 700; }
-.bt-g { color: #2a6645; }
-.bt-r { color: #662030; }
+.bt-g { color: #4dbb82; }
+.bt-r { color: #c45060; }
 .briefing-lock-overlay {
   grid-column: 1 / -1;
   background: #050b10;
@@ -192,15 +192,15 @@ body::after {
   justify-content: space-between;
   gap: 24px;
 }
-.blo-text { font-size: 11px; color: var(--text3); line-height: 1.8; }
-.blo-text strong { color: #3d6b52; font-weight: 500; }
+.blo-text { font-size: 11px; color: #8ecfaa; line-height: 1.8; }
+.blo-text strong { color: #aad4bb; font-weight: 500; }
 .blo-cta {
   font-family: var(--orb);
   font-size: 8px;
   letter-spacing: 2px;
-  color: #3d6b52;
+  color: #8ecfaa;
   background: transparent;
-  border: 1px solid rgba(0,255,157,0.2);
+  border: 1px solid rgba(0,255,157,0.3);
   padding: 10px 24px;
   text-decoration: none;
   font-weight: 700;
@@ -1186,7 +1186,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
     </h1>
     <p class="hero-sub">SURVIVE LONGER. WIN SMARTER.</p>
     <p class="hero-desc">
-      프랍트레이더가 만든 7년간의 나스닥 백테스트 기반,<br>
+      진지한 프랍트레이더가 만든 7년간의 나스닥 백테스트 기반,<br>
       <strong>연평균 약 70% 승률</strong>을 기록한 시스템 인디케이터.<br>
       자동매매가 아닌, <strong>당신의 판단을 강화</strong>하는 도구입니다.
     </p>
@@ -1733,10 +1733,10 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           </div>
         </div>
         <div class="briefing-event-row">
-          <div class="be-time" style="color:#5a2a30">23:00 🔥🔥</div>
+          <div class="be-time" style="color:#cc4455">23:00 🔥🔥</div>
           <div>
             <div class="be-event">🚨 ISM 제조업 PMI 발표</div>
-            <div class="be-note" style="color:#3d3020">오늘 최대 이벤트. 50 미만이면 NQ 즉시 급락 가능. 발표 전후 진입 금지</div>
+            <div class="be-note" style="color:#b89050">오늘 최대 이벤트. 50 미만이면 NQ 즉시 급락 가능. 발표 전후 진입 금지</div>
           </div>
         </div>
         <div class="briefing-event-row">
@@ -1747,7 +1747,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
           </div>
         </div>
         <div class="briefing-event-row">
-          <div class="be-time" style="color:#5a2a30">6/6 NFP 🔥🔥🔥</div>
+          <div class="be-time" style="color:#cc4455">6/6 NFP 🔥🔥🔥</div>
           <div>
             <div class="be-event">🚨 5월 비농업고용 발표</div>
             <div class="be-note">이번 주 최대 이벤트. 발표 전후 포지션 보유 절대 금지</div>
@@ -1826,16 +1826,16 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 
         <!-- 텍스트 -->
         <div>
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:4px;color:#1e3d2a;margin-bottom:10px;">// MEMBERS ONLY</div>
-          <div style="font-family:var(--orb);font-size:15px;font-weight:700;color:#2a5a3a;letter-spacing:2px;margin-bottom:6px;">멤버십 회원에게 제공됩니다</div>
-          <div style="font-family:var(--mono);font-size:10px;color:#1e3028;letter-spacing:1px;">매일 오전 8시 · 전체 브리핑 · 회원 전용</div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:4px;color:#5a9070;margin-bottom:10px;">// MEMBERS ONLY</div>
+          <div style="font-family:var(--orb);font-size:15px;font-weight:700;color:#8ecfaa;letter-spacing:2px;margin-bottom:6px;">멤버십 회원에게 제공됩니다</div>
+          <div style="font-family:var(--mono);font-size:10px;color:#6aaa88;letter-spacing:1px;">매일 오전 8시 · 전체 브리핑 · 회원 전용</div>
         </div>
 
         <a href="#pricing" style="
           font-family:var(--orb);
           font-size:8px;
           letter-spacing:2px;
-          color:#2a5a3a;
+          color:#8ecfaa;
           background:transparent;
           border:1px solid rgba(0,255,157,0.15);
           padding:9px 22px;
@@ -1897,6 +1897,61 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         메일 미수신 시: <a href="mailto:maketk@kakao.com">maketk@kakao.com</a>
       </p>
     </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:40px;border-top:1px solid rgba(0,255,157,0.08);padding-top:32px;">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;color:#5a9070;margin-bottom:20px;">// FAQ</div>
+
+      <!-- Q1 -->
+      <div style="border:1px solid rgba(0,255,157,0.08);margin-bottom:1px;overflow:hidden;">
+        <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=this.nextElementSibling.style.display==='block'?'rotate(180deg)':'rotate(0deg)'" style="width:100%;background:rgba(0,255,157,0.02);border:none;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;">
+          <span style="font-family:var(--mono);font-size:12px;color:#aad4bb;font-weight:500;">프랍트레이딩이 무엇인가요?</span>
+          <span class="faq-arrow" style="color:#4dbb82;font-size:14px;transition:transform .3s;flex-shrink:0;margin-left:16px;">↓</span>
+        </button>
+        <div style="display:none;padding:0 24px 20px;background:rgba(0,0,0,0.2);">
+          <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
+            프랍트레이딩(Proprietary Trading)은 개인 자본이 아닌 <span style="color:#aad4bb;">회사 자금을 위탁받아 트레이딩</span>하는 방식입니다.<br><br>
+            APEX, FTMO, Topstep 같은 프랍 펌에서 심사(챌린지)를 통과하면 수천만~수억 원 규모의 자금을 운용할 수 있으며, 수익의 <span style="color:#4dbb82;">80~90%를 트레이더가 가져갑니다.</span> 자기 자본 리스크 없이 큰 자금을 운용할 수 있다는 것이 핵심입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div style="border:1px solid rgba(0,255,157,0.08);overflow:hidden;">
+        <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=this.nextElementSibling.style.display==='block'?'rotate(180deg)':'rotate(0deg)'" style="width:100%;background:rgba(0,255,157,0.02);border:none;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;">
+          <span style="font-family:var(--mono);font-size:12px;color:#aad4bb;font-weight:500;">프랍에서 매일 $100달러을 번다는 건 어떤 의미인가요?</span>
+          <span class="faq-arrow" style="color:#4dbb82;font-size:14px;transition:transform .3s;flex-shrink:0;margin-left:16px;">↓</span>
+        </button>
+        <div style="display:none;padding:0 24px 24px;background:rgba(0,0,0,0.2);">
+          <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
+            많은 사람들이 처음 이 숫자를 보면 이렇게 생각합니다.<br>
+            <span style="color:#8ecfaa;font-style:italic;">"하루 $100? 월급으로 치면 얼마 안 되잖아."</span><br><br>
+            맞습니다. 계좌 하나 기준으로 보면, 한 달에 약 $2,000 — 월급과 비슷하거나 오히려 적을 수도 있습니다.<br><br>
+            하지만 프랍 트레이딩에서 <span style="color:#aad4bb;">하루 $100의 진짜 의미는 금액 자체가 아닙니다.</span><br><br>
+
+            <span style="color:#4dbb82;font-size:12px;">// 핵심은 '복제 가능성'입니다</span><br><br>
+
+            프랍에서는 하나의 계좌만 운용하는 게 아닙니다. <span style="color:#aad4bb;">동일한 전략을 여러 계좌에 동시에 적용</span>할 수 있습니다. 같은 시간, 같은 노력으로 수익만 배수로 늘어나는 구조입니다.<br><br>
+
+            <span style="color:#aad4bb;">· 계좌 1개</span> → 하루 <span style="color:#4dbb82;">$100</span><br>
+            <span style="color:#aad4bb;">· 계좌 3개</span> → 하루 <span style="color:#4dbb82;">$300</span><br>
+            <span style="color:#aad4bb;">· 계좌 5개</span> → 하루 <span style="color:#4dbb82;">$500</span><br>
+            <span style="color:#aad4bb;">· 계좌 10개</span> → 하루 <span style="color:#4dbb82;">$1,000</span><br><br>
+
+            <span style="color:#4dbb82;font-size:12px;">// $100은 '실력의 증명'입니다</span><br><br>
+
+            매일 $100을 꾸준히 낸다는 것은 단순한 운이 아닙니다. <span style="color:#aad4bb;">일관된 전략, 철저한 리스크 관리, 흔들리지 않는 멘탈</span>이 모두 갖춰졌다는 증거입니다.<br><br>
+            한 번 크게 터뜨리는 것은 누구나 할 수 있습니다. 하지만 매일, 꾸준히, 안정적으로 수익을 내는 것은 <span style="color:#aad4bb;">진짜 실력자만이 할 수 있는 일</span>입니다.<br><br>
+            그 실력이 검증되는 순간, 계좌는 늘릴 수 있습니다. 그리고 수익은 자연스럽게 따라옵니다.<br><br>
+
+            즉 <span style="color:#aad4bb;">"매일 $100을 번다"</span>는 말은 한 계좌 기준의 목표치일 뿐이고, 계좌 수를 늘릴수록 같은 시그널로 수익이 <span style="color:#4dbb82;">그대로 배수로 증가</span>합니다.<br>
+            적은 목표를 여러 계좌로 쌓아가는 것 — 이것이 프랍 다계좌 전략의 핵심입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
@@ -1926,12 +1981,12 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
     <div class="turtle-icon" style="width:28px;height:28px;font-size:15px;"></div>
     <div class="logo-text-wrap">
       <div class="logo-main">TURTLE 20 PA</div>
-      <div class="logo-sub">PRECISION NASDAQ ENGINE</div>
+      <div class="logo-sub">NASDAQ INDICATOR SYSTEM</div>
     </div>
   </div>
   <p>© 2025 TURTLE 20 PA · ALL RIGHTS RESERVED</p>
-  <p style="margin-top:10px;font-size:10px;color:#2d4d3a;letter-spacing:1px;line-height:1.9;">
-    상호: 터틀인사이트 &nbsp;|&nbsp; 대표자: 황현석 &nbsp;|&nbsp; 사업자등록번호: xxx-xxx-xxx &nbsp;|&nbsp; 주소: 경기도 시흥시
+  <p style="margin-top:10px;font-size:10px;color:#5a9070;letter-spacing:1px;line-height:1.9;">
+    상호: 터틀인사이트 &nbsp;|&nbsp; 대표자: 황현석 &nbsp;|&nbsp; 사업자등록번호: xxx-xxx-xxx &nbsp;|&nbsp; 주소: 서울시 광진구 광나루로22나길 4
   </p>
 </footer>
 
