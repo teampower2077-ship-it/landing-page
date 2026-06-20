@@ -601,34 +601,15 @@ nav {
 @keyframes grow-bar { from { width: 0; } to { width: 70%; } }
 .wrate-pct { font-family: var(--orb); font-size: 14px; color: var(--green); font-weight: 700; }
 
-/* ── TICKER ── */
-.ticker {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 10px 0;
-  overflow: hidden;
-  background: rgba(0,255,157,0.02);
-}
-.ticker-inner {
-  display: flex;
-  gap: 60px;
-  animation: scroll-left 30s linear infinite;
-  white-space: nowrap;
-}
-.t-item { font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: 2px; flex-shrink: 0; }
-.t-item .t-sym { color: var(--text2); margin-right: 8px; }
-.t-item .t-up { color: var(--green); }
-.t-item .t-dn { color: var(--red); }
-@keyframes scroll-left { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-
 /* ── STATS GRID ── */
 .stats-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid var(--line);
+  background: #060c12;
 }
 .stat-cell {
-  padding: 48px 36px;
+  padding: 40px 32px;
   border-right: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -657,18 +638,25 @@ nav {
   color: var(--green);
   line-height: 1;
   display: block;
-  margin-bottom: 12px;
-  text-shadow: 0 0 30px rgba(0,255,157,0.2);
+  margin-bottom: 14px;
+  text-shadow: 0 0 24px rgba(0,255,157,0.45);
 }
-.stat-num span { font-size: 20px; }
+.stat-num span { font-size: 22px; }
 .stat-label {
   font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text2);
-  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #eafff5;
+  letter-spacing: 1.5px;
   display: block;
 }
-.stat-sub { font-size: 9px; color: var(--text3); margin-top: 6px; display: block; }
+.stat-sub {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #9fc9b3;
+  margin-top: 8px;
+  display: block;
+}
 
 /* ── SECTION COMMON ── */
 .section-wrap {
@@ -1020,6 +1008,8 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
   .hero::before { display: none; }
   .hero-right { display: none; }
   .stats-section { grid-template-columns: 1fr 1fr; }
+  .stat-cell { padding: 28px 20px; }
+  .stat-num { font-size: 38px; }
   .stat-cell:nth-child(2) { border-right: none; }
   .stat-cell:nth-child(3) { border-right: 1px solid var(--line); }
   .section-wrap { padding: 60px 20px; }
@@ -1176,28 +1166,6 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
     </div>
   </div>
 </section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="t-item"><span class="t-sym">NQ1!</span> 21,847.50 <span class="t-up">▲ +1.24%</span></span>
-    <span class="t-item"><span class="t-sym">ES1!</span> 5,932.25 <span class="t-up">▲ +0.87%</span></span>
-    <span class="t-item"><span class="t-sym">WIN RATE</span> 7YR AVG <span class="t-up">~70%</span></span>
-    <span class="t-item"><span class="t-sym">TIMEFRAME</span> 5MIN SCALP</span>
-    <span class="t-item"><span class="t-sym">PLATFORM</span> TRADINGVIEW</span>
-    <span class="t-item"><span class="t-sym">MARKET</span> NASDAQ MICRO</span>
-    <span class="t-item"><span class="t-sym">VIX</span> 16.42 <span class="t-dn">▼ −0.38%</span></span>
-
-    <!-- duplicate for infinite scroll -->
-    <span class="t-item"><span class="t-sym">NQ1!</span> 21,847.50 <span class="t-up">▲ +1.24%</span></span>
-    <span class="t-item"><span class="t-sym">ES1!</span> 5,932.25 <span class="t-up">▲ +0.87%</span></span>
-    <span class="t-item"><span class="t-sym">WIN RATE</span> 7YR AVG <span class="t-up">~70%</span></span>
-    <span class="t-item"><span class="t-sym">TIMEFRAME</span> 5MIN SCALP</span>
-    <span class="t-item"><span class="t-sym">PLATFORM</span> TRADINGVIEW</span>
-    <span class="t-item"><span class="t-sym">MARKET</span> NASDAQ MICRO</span>
-    <span class="t-item"><span class="t-sym">VIX</span> 16.42 <span class="t-dn">▼ −0.38%</span></span>
-  </div>
-</div>
 
 <!-- STATS -->
 <div class="stats-section">
