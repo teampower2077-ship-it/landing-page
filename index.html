@@ -247,6 +247,19 @@ nav {
   z-index: 200;
 }
 
+/* ── TOP FILLER BAR (keeps space above nav solid, not see-through) ── */
+.top-filler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 39px;
+  background: rgba(2,4,8,0.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  z-index: 199;
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -1001,6 +1014,8 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 </style>
 </head>
 <body>
+
+<div class="top-filler"></div>
 
 <!-- NAV -->
 <nav>
