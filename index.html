@@ -232,33 +232,6 @@ body::after {
 }
 .bfw-link:hover { border-bottom-color: var(--green); }
 
-/* ── NOTICE BANNER ── */
-.notice-banner {
-  width: 100%;
-  background: var(--amber);
-  color: #000;
-  text-align: center;
-  padding: 10px 24px;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 2px;
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  z-index: 300;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  text-transform: uppercase;
-}
-.notice-dot {
-  display: inline-block;
-  width: 7px; height: 7px;
-  background: #000;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
-  animation: blink 1s ease-in-out infinite;
-}
-
 /* ── NAV ── */
 nav {
   display: flex;
@@ -1029,12 +1002,6 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
 </head>
 <body>
 
-<!-- NOTICE BANNER -->
-<div class="notice-banner">
-  <span class="notice-dot"></span>
-  <strong>⚠ 사이트 준비 중</strong> &nbsp;·&nbsp; 현재 결제하지 마세요 — 서비스 오픈 전입니다.
-</div>
-
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
@@ -1540,7 +1507,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         <div class="price-note">매월 갱신 · 언제든 취소 가능</div>
         <ul class="price-features">
           <li>TURTLE 20 PA 인디케이터 접근권</li>
-          <li>기본 세팅 + 활용 가이드 제공</li>
+          <li>기본 세팅 + 노하우 메뉴얼 제공</li>
           <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>매매일지 사이트 룰노트 제공</li>
         </ul>
@@ -1552,7 +1519,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         <div class="price-note">37.5% 할인 · 4.5개월 무료</div>
         <ul class="price-features">
           <li>TURTLE 20 PA 인디케이터 접근권</li>
-          <li>기본 세팅 + 활용 가이드 제공</li>
+          <li>기본 세팅 + 노하우 메뉴얼 제공</li>
           <li>모닝 브리핑 매일 아침 (오전 8시)</li>
           <li>매매일지 사이트 룰노트 제공</li>
           <li>평생 업데이트 지원</li>
@@ -1565,7 +1532,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
       <p>
         <strong>// 결제 완료 후</strong><br>
         아래 링크에서 트레이딩뷰 아이디를 입력해주시면 24시간 내에 매뉴얼과 승인 메일을 보내드립니다.<br><br>
-        트레이딩뷰는 무료회원으로도 가능합니다. 인디케이터 2개 설정.<br><br>
+        트레이딩뷰는 무료회원으로도 가능합니다.<br><br>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfI1fmYmmLsEiiCESQpRFd-Yx1nDumSjlbhSTFbAaw7mOaPuA/viewform?usp=publish-editor" target="_blank">👉 정보 입력하기 →</a>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         메일 미수신 시: <a href="mailto:maketk@kakao.com">maketk@kakao.com</a>
@@ -1585,7 +1552,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         <div style="display:none;padding:0 24px 20px;background:rgba(0,0,0,0.2);">
           <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
             프랍트레이딩(Proprietary Trading)은 개인 자본이 아닌 <span style="color:#aad4bb;">회사 자금을 위탁받아 트레이딩</span>하는 방식입니다.<br><br>
-            FTMO, Topstep 같은 프랍 펌에서 심사(챌린지)를 통과하면 수천만~수억 원 규모의 자금을 운용할 수 있으며, 수익의 <span style="color:#4dbb82;">80~90%를 트레이더가 가져갑니다.</span> 자기 자본 리스크 없이 큰 자금을 운용할 수 있다는 것이 핵심입니다.
+            APEX, 탑스텝 같은 프랍 펌에서 심사(챌린지)를 통과하면 수천만~수억 원 규모의 자금을 운용할 수 있으며, 수익의 <span style="color:#4dbb82;">80~90%를 트레이더가 가져갑니다.</span> 자기 자본 리스크 없이 큰 자금을 운용할 수 있다는 것이 핵심입니다.
           </p>
         </div>
       </div>
@@ -1598,7 +1565,8 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         </button>
         <div style="display:none;padding:0 24px 20px;background:rgba(0,0,0,0.2);">
           <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
-            초보자도 가능합니다. 다만 <span style="color:#aad4bb;">프랍트레이딩과 나스닥의 기본 개념</span>은 알고 계셔야 합니다. 요즘 유튜브에 관련 영상이 많으니 미리 찾아보시면 좋습니다.<br><br>
+            초보자도 가능합니다. 다만 <span style="color:#aad4bb;">프랍트레이딩과 나스닥의 기본 개념</span>은 알고 계셔야 합니다. <br><br>
+            보통은 트레이딩뷰 가입 -> 프랍회사 가입 -> 닌자트레이더 설치 -> 트레이딩연동 입니다.<BR><BR>
             프로그램 자체는 <span style="color:#4dbb82;">최대한 쉽게 설계</span>되어 있어, 어느 정도 경험이 있다면 더 수월하겠지만 <span style="color:#aad4bb;">초보자분들도 충분히 따라오실 수 있습니다.</span><br><br>
             단, 초보자분들은 <span style="color:#4dbb82;">연습 계좌</span>로 1~2개월 충분히 익히신 후 실전에 참여하시는 것을 권장합니다.
           </p>
@@ -1606,7 +1574,7 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
       </div>
 
       <!-- Q2 -->
-      <div style="border:1px solid rgba(0,255,157,0.08);overflow:hidden;">
+      <div style="border:1px solid rgba(0,255,157,0.08);margin-bottom:1px;overflow:hidden;">
         <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=this.nextElementSibling.style.display==='block'?'rotate(180deg)':'rotate(0deg)'" style="width:100%;background:rgba(0,255,157,0.02);border:none;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;">
           <span style="font-family:var(--mono);font-size:12px;color:#aad4bb;font-weight:500;">프랍에서 매일 $100를 번다는 건 어떤 의미인가요?</span>
           <span class="faq-arrow" style="color:#4dbb82;font-size:14px;transition:transform .3s;flex-shrink:0;margin-left:16px;">↓</span>
@@ -1620,6 +1588,162 @@ footer p { font-size: 9px; color: var(--text3); letter-spacing: 1px; }
         </div>
       </div>
 
+      <!-- Q4 -->
+      <div style="border:1px solid rgba(0,255,157,0.08);margin-bottom:1px;overflow:hidden;">
+        <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=this.nextElementSibling.style.display==='block'?'rotate(180deg)':'rotate(0deg)'" style="width:100%;background:rgba(0,255,157,0.02);border:none;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;">
+          <span style="font-family:var(--mono);font-size:12px;color:#aad4bb;font-weight:500;">추후 커뮤니티를 만들 생각이 있나요?</span>
+          <span class="faq-arrow" style="color:#4dbb82;font-size:14px;transition:transform .3s;flex-shrink:0;margin-left:16px;">↓</span>
+        </button>
+        <div style="display:none;padding:0 24px 20px;background:rgba(0,0,0,0.2);">
+          <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
+            어느 정도 회원이 모이면 <span style="color:#aad4bb;">디스코드를 운영할 생각</span>이 있습니다.<br><br>
+            다만 현재는 <span style="color:#4dbb82;">직관성과 단순화</span>를 위해 별도 커뮤니티 추진은 진행하고 있지 않습니다. 대신 <span style="color:#aad4bb;">매뉴얼을 조금 더 깊게 작성</span>하는 방향을 고민 중입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div style="border:1px solid rgba(0,255,157,0.08);overflow:hidden;">
+        <button onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none';this.querySelector('.faq-arrow').style.transform=this.nextElementSibling.style.display==='block'?'rotate(180deg)':'rotate(0deg)'" style="width:100%;background:rgba(0,255,157,0.02);border:none;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;">
+          <span style="font-family:var(--mono);font-size:12px;color:#aad4bb;font-weight:500;">사용자에게 해주실 조언이 있나요?</span>
+          <span class="faq-arrow" style="color:#4dbb82;font-size:14px;transition:transform .3s;flex-shrink:0;margin-left:16px;">↓</span>
+        </button>
+        <div style="display:none;padding:0 24px 20px;background:rgba(0,0,0,0.2);">
+          <p style="font-family:var(--mono);font-size:11px;color:#6aaa88;line-height:1.9;">
+            <span style="color:#aad4bb;">더 좋은 지표가 있을 수 있음을 인정</span>합니다. 저희는 최상위 티어보다는 <span style="color:#4dbb82;">상위 티어급</span>을 목표로 진행합니다.<br><br>
+            <span style="color:#aad4bb;">안정된 기반으로 확률적으로 거래하세요.</span> 그리고 <span style="color:#4dbb82;">익숙해지세요.</span> 그게 전부입니다.<br> 그리고 어려운 점이 있으면 진지하게 메일을 주세요. <br>읽어보고 도움 될부분 이 있으면 도움이 되드리겠습니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- OPERATOR PROFILE -->
+<section style="padding:80px 48px;max-width:1280px;margin:0 auto;">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:40px;">
+    <span style="font-family:var(--mono);font-size:9px;letter-spacing:3px;color:#5a9070;">// OPERATOR PROFILE</span>
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(0,255,157,0.2),transparent);"></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:start;">
+
+    <!-- Left: Identity Card -->
+    <div style="background:#060d14;border:1px solid rgba(0,255,157,0.12);padding:32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(0,255,157,0.5),transparent);"></div>
+
+      <!-- Avatar placeholder -->
+      <div style="width:80px;height:80px;border:1px solid rgba(0,255,157,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;background:rgba(0,255,157,0.04);">
+        <span style="font-size:36px;">🐢</span>
+        <div style="position:absolute;bottom:-4px;right:-4px;width:12px;height:12px;background:var(--green);border:2px solid #020408;border-radius:50%;"></div>
+      </div>
+
+      <div style="font-family:var(--orb);font-size:15px;color:var(--green);letter-spacing:2px;margin-bottom:4px;">OPERATOR</div>
+      <div style="font-family:var(--mono);font-size:10px;color:#5a9070;letter-spacing:2px;margin-bottom:20px;">TURTLE 20 PA · LEAD TRADER</div>
+
+      <div style="border-top:1px solid rgba(0,255,157,0.08);padding-top:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <span style="font-family:var(--mono);font-size:9px;color:#5a9070;letter-spacing:1px;">EXPERIENCE</span>
+          <span style="font-family:var(--orb);font-size:18px;color:var(--green);font-weight:700;">15<span style="font-size:11px;color:#4dbb82;">YRS</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <span style="font-family:var(--mono);font-size:9px;color:#5a9070;letter-spacing:1px;">AUTO SYSTEMS</span>
+          <span style="font-family:var(--orb);font-size:18px;color:var(--amber);font-weight:700;">20<span style="font-size:11px;color:#cc8800;">+</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:var(--mono);font-size:9px;color:#5a9070;letter-spacing:1px;">PROP FIRMS PASSED</span>
+          <span style="font-family:var(--orb);font-size:18px;color:var(--blue);font-weight:700;">5<span style="font-size:11px;color:#0099cc;">+</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Career Timeline -->
+    <div style="background:#060d14;border:1px solid rgba(0,255,157,0.08);padding:32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(0,200,255,0.3),transparent);"></div>
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:3px;color:#5a9070;margin-bottom:24px;">CAREER TIMELINE</div>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <!-- Item 1 -->
+        <div style="display:flex;gap:20px;padding-bottom:24px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:10px;height:10px;border:2px solid var(--blue);background:rgba(0,200,255,0.15);border-radius:50%;margin-top:3px;"></div>
+            <div style="width:1px;flex:1;background:rgba(0,255,157,0.1);margin-top:6px;"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--blue);letter-spacing:2px;margin-bottom:4px;">FOUNDATION</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">일본인 외환 딜러에게 전문 교육 수료</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">20대 시절, 현직 일본인 외환 딜러로부터 체계적인 트레이딩 교육을 받으며 전문 기초를 다짐</div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div style="display:flex;gap:20px;padding-bottom:24px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:10px;height:10px;border:2px solid var(--amber);background:rgba(255,179,0,0.12);border-radius:50%;margin-top:3px;"></div>
+            <div style="width:1px;flex:1;background:rgba(0,255,157,0.1);margin-top:6px;"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--amber);letter-spacing:2px;margin-bottom:4px;">AUTOMATION</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">코인 자동매매 시스템 20개 이상 개발 · 운영</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">다수의 알고리즘 자동매매 시스템을 직접 설계·구축하며 시스템 트레이딩 전문성 확보</div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div style="display:flex;gap:20px;padding-bottom:24px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:10px;height:10px;border:2px solid var(--green);background:rgba(0,255,157,0.1);border-radius:50%;margin-top:3px;"></div>
+            <div style="width:1px;flex:1;background:rgba(0,255,157,0.1);margin-top:6px;"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--green);letter-spacing:2px;margin-bottom:4px;">PUBLISHING</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">트레이딩 관련 사이트 운영 경험</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">트레이딩 교육·정보 제공 플랫폼을 직접 기획·운영하며 커뮤니티 빌딩 경험 축적</div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div style="display:flex;gap:20px;padding-bottom:24px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:10px;height:10px;border:2px solid var(--red);background:rgba(255,61,90,0.1);border-radius:50%;margin-top:3px;"></div>
+            <div style="width:1px;flex:1;background:rgba(0,255,157,0.1);margin-top:6px;"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--red);letter-spacing:2px;margin-bottom:4px;">COMPETITION</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">해외 프랍펌 대회 <span style="color:var(--amber);">11위 · 12위</span> 달성</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">글로벌 수천 명 트레이더와의 경쟁에서 연속 상위권 입상으로 실전 역량 입증</div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div style="display:flex;gap:20px;padding-bottom:24px;position:relative;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:10px;height:10px;border:2px solid var(--blue);background:rgba(0,200,255,0.12);border-radius:50%;margin-top:3px;"></div>
+            <div style="width:1px;flex:1;background:rgba(0,255,157,0.1);margin-top:6px;"></div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--blue);letter-spacing:2px;margin-bottom:4px;">CERTIFIED</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">메이저 프랍펌 <span style="color:var(--green);">5개 이상</span> 합격</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">APEX, 라이프업 등 글로벌 주요 프랍펌 챌린지를 다수 통과하며 검증된 트레이딩 실력 공인</div>
+          </div>
+        </div>
+
+        <!-- Item 6 — Current (no bottom line) -->
+        <div style="display:flex;gap:20px;">
+          <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;">
+            <div style="width:12px;height:12px;border:2px solid var(--green);background:var(--green);border-radius:50%;margin-top:3px;box-shadow:0 0 10px rgba(0,255,157,0.6);"></div>
+          </div>
+          <div style="background:rgba(0,255,157,0.04);border:1px solid rgba(0,255,157,0.15);padding:14px 18px;flex:1;">
+            <div style="font-family:var(--mono);font-size:8px;color:var(--green);letter-spacing:2px;margin-bottom:4px;">▶ CURRENT · LIVE</div>
+            <div style="font-family:var(--mono);font-size:13px;color:#aad4bb;font-weight:500;line-height:1.5;">자금 지원 계좌를 운용 중인 평범한 프랍 트레이더</div>
+            <div style="font-family:var(--mono);font-size:10px;color:#5a9070;margin-top:4px;line-height:1.6;">강의나 이론이 아닌, 현재도 실계좌를 직접 운용하며 검증된 전략만을 공유합니다</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
